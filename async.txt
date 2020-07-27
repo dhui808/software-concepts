@@ -1,0 +1,24 @@
+Call Enstream to validate home phone and mobile phone
+
+https://stackify.com/when-to-use-asynchronous-programming/ 
+
+Asynch does not make sense: 
+if two independent calls need to access the same (shared) resources
+if 2nd call depends on the results from the 1st call
+simple program
+CPU-bound tasks
+
+Asych aims to avoid blocking the main thread (event loop) so it can process other requests.
+
+The conditions for using RX:
+1. At least two tasks in the same request (if only one task, one more thread with synch process is OK)
+2. The two tasks are independent (otherwise, they have to be executed sequentially in a synch way)
+3. The two tasks do not share a common resource (e.g. a single database server without connection pool or already reaching max capacity) 
+
+In other words, RX can spawn another thread to handle the 2nd task at same time as the 1st task.
+In the case of single-thread language like JS, 1 st task can return immediate to allow other tasks being executed.
+
+Or, we can say that the system has resources available to handle the 2nd task without slowing down the 1st task.
+The resources are available if either they have not reached the maximum capacity or are scalable.
+
+JVM generates system level threads while Asynch generates app level threads.
