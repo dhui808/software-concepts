@@ -1,0 +1,2 @@
+To base64 encode test.jks file, using Git Bash
+base64 -i test.jks > test.txt
