@@ -3,3 +3,9 @@ keytool -genkeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore mykeys
 
 List the keystore certs
 keytool -v -list -keystore mykeystore.p12 -storepass 123456
+
+Another cert in a truststore
+keytool -genkeypair -keyalg RSA -keysize 2048 -storetype jks -keystore abctruststore.jks -validity 365 -alias abckey
+
+Import certificate:
+keytool -importkeystore -srckeystore mykeystore.p12 -srcstoretype PKCS12 -destkeystore abctruststore.jks -deststoretype jks
