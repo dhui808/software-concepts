@@ -1,0 +1,5 @@
+Generate self-signed PKCS12 cert, password 123456
+keytool -genkeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore mykeystore.p12 -validity 365
+
+List the keystore certs
+keytool -v -list -keystore mykeystore.p12 -storepass 123456
