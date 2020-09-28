@@ -1,11 +1,14 @@
 Generate self-signed PKCS12 cert, password 123456
-keytool -genkeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore mykeystore.p12 -validity 365
+Need to provide localhost as a subject alternative name when creating the certificate
+keytool -genkeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore globekeystore.p12 -dname "CN=*.globe.com,OU=Information Services,O=Globe Inc.,C=CA" -ext "SAN:c=DNS:localhost,IP:127.0.0.1"  -validity 365 -alias globekey -storepass 123456 -keypass 123456
+keytool -v -list -keystore globekeystore.p12 -storepass 123456
 
-List the keystore certs
-keytool -v -list -keystore mykeystore.p12 -storepass 123456
+#Another keystore for ssl client app
+keytool -genkeypair -keyalg RSA -keysize 2048 -storetype JKS -keystore abcdkeystore.jks -dname "CN=*.abcd.com,OU=Consulting,O=ABC Co.,C=CA" -ext "SAN:c=DNS:localhost,IP:127.0.0.1"  -validity 365 -alias abcdkey -storepass 123456 -keypass 123456
 
-Another cert in a truststore
-keytool -genkeypair -keyalg RSA -keysize 2048 -storetype jks -keystore abctruststore.jks -validity 365 -alias abckey
+Export cert from server keystore:
+keytool -export -alias globekey  -keystore globekeystore.p12 -storepass 123456 -rfc -file public.cert
 
 Import certificate:
-keytool -importkeystore -srckeystore mykeystore.p12 -srcstoretype PKCS12 -destkeystore abctruststore.jks -deststoretype jks
+keytool -import -alias globekey -file public.cert -storetype JKS -keystore abcdtruststore.jks -storepass 123456
+keytool -v -list -keystore abcdtruststore.jks -storepass 123456
