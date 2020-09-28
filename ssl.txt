@@ -1,0 +1,3 @@
+Fetch a remote SSL certificate details:
+keytool -printcert -sslserver $host[:$port]
+
