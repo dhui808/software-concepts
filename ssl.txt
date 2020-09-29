@@ -1,3 +1,3 @@
 Fetch a remote SSL certificate details:
-keytool -printcert -sslserver $host[:$port]
+keytool -printcert -sslserver $host[:$port] -rfc > temp.crt
 
