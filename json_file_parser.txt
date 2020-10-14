@@ -1,0 +1,45 @@
+public class VendorProductsJsonParser {
+
+	public static List<VendorWebModel> getVendorProducts() throws JsonParseException, JsonMappingException, IOException {
+		
+		ObjectMapper mapper = new ObjectMapper();
+
+		System.out.println("Read vendor product from " + Constants.VENDOR_FILE_PATH);
+		
+		List<VendorWebModel> vendors = mapper.readValue(
+				new File(Constants.VENDOR_FILE_PATH), 
+				new TypeReference<List<VendorWebModel>>() {
+		});
+		
+		return vendors;
+	}
+}
+
+public class VendorWebModel {
+	String vendorName;
+	String baseUrl;
+	Map<String, String> products;
+	
+	public String getVendorName() {
+		return vendorName;
+	}
+	public void setVendorName(String vendorName) {
+		this.vendorName = vendorName;
+	}
+	public String getBaseUrl() {
+		return baseUrl;
+	}
+	public void setBaseUrl(String baseUrl) {
+		this.baseUrl = baseUrl;
+	}
+	public Map<String, String> getProducts() {
+		return products;
+	}
+	public void setProducts(Map<String, String> products) {
+		this.products = products;
+	}
+	
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
+}
