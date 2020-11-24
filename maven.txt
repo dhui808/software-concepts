@@ -1,0 +1,2 @@
+settings.xml
+  <server><id> needs to match <repository><id>
