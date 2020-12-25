@@ -1,0 +1,14 @@
+Health check via Spring Boot Actuator
+  Add dependency to pom.xml
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    
+  Add health check from OpenShift web console
+    Readiness probe: path: /springbootstarter/actuator/health/readiness
+                     port: 8082
+    Liveness probe: path: /springbootstarter/actuator/health/liveness
+                     port: 8082
+    where springbootstarter is the web application context root
+    8082 is the web application port
