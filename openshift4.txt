@@ -1,3 +1,12 @@
+Create a Java application based on the provided [image]~[source code] combination, without external application config.
+  oc new-app  java:openjdk-11-el7~https://github.com/dhui808/springbootstarter
+  oc expose service/springbootstarter
+  (or: oc expose service springbootstarter)
+
+Delete an application
+  oc delete all -l app=springbootstarter
+  (If the app is created from web concole, need to manually delete the generated secrets.)
+  
 Health check via Spring Boot Actuator
   Add dependency to pom.xml
     <dependency>
