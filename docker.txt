@@ -14,3 +14,10 @@ docker ps
 docker container stop f63221907dc0
 
 docker rmi -f $(docker images -a -q)
+
+Vert.x
+git clone https://github.com/dhui808/service-virtualization-vertx.git
+cd /service-virtualization-vertx/servicevirtualizationvertx/
+mvn clean install
+docker build -t dannyhui/servicevirtualizationvertx .
+docker push docker.io/dannyhui/servicevirtualizationvertx
