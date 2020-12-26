@@ -8,3 +8,9 @@ Build Docker imgage
 docker build -t dannyhui/servicevirtualizationservlet .
 docker push docker.io/dannyhui/servicevirtualizationservlet
 docker run -d -p 8080:8080 -p 5005:5005 -t dannyhui/servicevirtualizationservlet
+
+docker ps
+
+docker container stop f63221907dc0
+
+docker rmi -f $(docker images -a -q)
