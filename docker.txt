@@ -4,4 +4,7 @@ Log in
 Log out
   docker logout
 
-docker images
+Build Docker imgage
+docker build -t dannyhui/servicevirtualizationservlet .
+docker push docker.io/dannyhui/servicevirtualizationservlet
+docker run -d -p 8080:8080 -p 5005:5005 -t dannyhui/servicevirtualizationservlet
