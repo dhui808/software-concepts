@@ -1,0 +1,7 @@
+Log in
+  docker login -u <username> -p <password>
+
+Log out
+  docker logout
+
+docker images
