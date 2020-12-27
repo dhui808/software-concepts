@@ -46,6 +46,9 @@ docker push localhost:5000/servicevirtualizationservlet
 clean up the locally-cached images
 docker images
 docker rmi14041314afe5 -f
+
+https://www.codeproject.com/Articles/1263817/How-to-Setup-Our-Own-Private-Docker-Registry
+https://www.codeproject.com/Articles/1263831/How-to-secure-your-private-Docker-Registry
 ###################################################################################################################
 
 
