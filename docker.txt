@@ -33,3 +33,19 @@ Check Docker request limits:
 TOKEN=$(curl --user 'username:password' "https://auth.docker.io/token?service=registry.docker.io&scope=repository:ratelimitpreview/test:pull" | jq -r .token)
 Then to get the headers showing your limits, run the following:
 curl --head -H "Authorization: Bearer $TOKEN" https://registry-1.docker.io/v2/ratelimitpreview/test/manifests/latest
+
+###################################################################################################################
+Deploy a private registry server
+A registry is an instance of the registry image, and runs within Docker
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+
+docker pull dannyhui/servicevirtualizationservlet
+docker tag dannyhui/servicevirtualizationservlet localhost:5000/servicevirtualizationservlet
+docker push localhost:5000/servicevirtualizationservlet
+
+clean up the locally-cached images
+docker images
+docker rmi14041314afe5 -f
+###################################################################################################################
+
+
