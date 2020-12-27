@@ -47,8 +47,61 @@ clean up the locally-cached images
 docker images
 docker rmi14041314afe5 -f
 
+###################################################################################################################
 https://www.codeproject.com/Articles/1263817/How-to-Setup-Our-Own-Private-Docker-Registry
 https://www.codeproject.com/Articles/1263831/How-to-secure-your-private-Docker-Registry
+
+Create private registry with name hub.docker.local
+Modify etc/hosts with the below lines:
+# Private Docker Registry
+127.0.0.1 hub.docker.local
+
+Spin up a container with the docker registry image:
+docker run -d -p 5000:5000 -v C:/Users/danny.hui/localhub/registry:/var/lib/registry --restart=always --name hub.local registry
+
+Test
+docker pull alpine
+docker tag alpine hub.docker.local:5000/my-alpine
+docker push hub.docker.local:5000/my-alpine
+
+Remove the alpine and its tagged version
+docker rmi hub.docker.local:5000/my-alpine 
+docker rmi alpine
+
+Pull the my-alpine image from your private registry.
+docker pull hub.docker.local:5000/my-alpine
+
+Spin up a container with newly downloaded image and ask the container to list out its root directory
+docker run hub.docker.local:5000/my-alpine ls
+
+Check registry catalog on this http://hub.docker.local:5000/v2/_catalog address.
+
+Inspect the C:/Users/danny.hui/localhub/registry folder to understand how docker images are stored in the docker registry.
+
+Stop and remove the registry container and image, my-alpine image
+docker container stop hub.local
+docker container rm hub.local 
+docker ps -a
+docker container rm container_id
+docker rmi hub.docker.local:5000/my-alpine
+
+Secure private private Docker registry
+Create self-signed SSL cert under /mnt/c/Users/danny.hui/localhub/certs (Windows Terminal - Ubuntu)
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/localhub.key -x509 -days 3650 -out certs/localhub.crt
+
+Apply the Self-Signed Certificate to the Registry
+docker run -d -p 443:443 --name local.hub -v C:/Users/danny.hui/localhub/certs:/certs -v C:/Users/danny.hui/localhub/registry:/var/lib/registry -e REGISTRY_HTTP_ADDR=0.0.0.0:443 -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/localhub.crt -e REGISTRY_HTTP_TLS_KEY=/certs/localhub.key registry
+
+Pull and push image to the local registry
+docker pull dannyhui/servicevirtualizationservlet
+docker tag dannyhui/servicevirtualizationservlet hub.docker.local/servicevirtualizationservlet
+docker push hub.docker.local/servicevirtualizationservlet
+docker rmi hub.docker.local/servicevirtualizationservlet
+docker rmi dannyhui/servicevirtualizationservlet
+docker images
+docker pull hub.docker.local/servicevirtualizationservlet
+docker images
+docker rmi hub.docker.local/servicevirtualizationservlet
+
+Check the catalog URL https://hub.docker.local/v2/_catalog
 ###################################################################################################################
-
-
