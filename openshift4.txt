@@ -23,5 +23,5 @@ Health check via Spring Boot Actuator
     8082 is the web application port
 
 Installing odo on Linux
-  curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
-  chmod +x /usr/local/bin/odo
+  sudo curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
+  sudo chmod +x /usr/local/bin/odo
