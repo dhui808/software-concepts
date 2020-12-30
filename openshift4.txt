@@ -25,3 +25,8 @@ Health check via Spring Boot Actuator
 Installing odo on Linux
   sudo curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
   sudo chmod +x /usr/local/bin/odo
+
+odo login
+  odo login https://api.sandbox.x8i5.p1.openshiftapps.com:6443 --token=sha256~PKhTHU2W47_-BKwwzqCX8AxaO8L_kVmkknhQZi9imnQ 
+oc login 
+  oc login --token=sha256~PKhTHU2W47_-BKwwzqCX8AxaO8L_kVmkknhQZi9imnQ --server=https://api.sandbox.x8i5.p1.openshiftapps.com:6443
