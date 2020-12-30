@@ -33,3 +33,38 @@ odo
   odo login https://api.sandbox.x8i5.p1.openshiftapps.com:6443 --token=sha256~PKhTHU2W47_-BKwwzqCX8AxaO8L_kVmkknhQZi9imnQ
   odo catalog list components
 
+Install ODO
+sudo curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
+sudo chmod +x /usr/local/bin/odo
+
+odo login https://api.sandbox.x8i5.p1.openshiftapps.com:6443 --token=sha256~PKhTHU2W47_-BKwwzqCX8AxaO8L_kVmkknhQZi9imnQ 
+
+mkdir odonodejs && cd odonodejs
+git clone https://github.com/openshift/nodejs-ex
+cd nodejs-ex/
+odo create nodejs
+(openshshift/nodejs is an OpenShift builder image, which can be used to create to crete Node.js app with your source code)
+vi server.js
+change port 8080 -> 3000. Since OpenShift generates service/route with port 3000!
+odo push
+odo url list
+
+create storage to add persistent data to your application (storage is created in pods)
+odo storage create mystorage --path=/tmp/mystorage --size=5M
+odo push
+odo storage list
+Delete the storage from your component:
+odo storage delete mystorage
+
+Adding a custom builder to specify a build image
+mkdir openjdk18 && cd openjdk18
+oc import-image openjdk18 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift --confirm
+oc annotate istag/openjdk18:latest tags=builder
+odo create openjdk18 --git https://github.com/openshift-evangelists/Wild-West-Backend
+odo push
+
+Delete application:
+odo component list
+odo app list
+odo app delete <application_name>
+
