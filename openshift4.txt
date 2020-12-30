@@ -73,4 +73,10 @@ Install Openjdk 1.8 on Linux
 sudo apt-get install openjdk-8-jdk
 Modify .profile:
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH=/usr/share/maven/bin:$JAVA_HOME/bin:$PATH
+
+Install Maven
+sudo apt update
+sudo apt install maven
+Maven home: /usr/share/maven
+
