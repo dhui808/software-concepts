@@ -69,3 +69,8 @@ odo component list
 odo app list
 odo app delete <application_name>
 
+Install Openjdk 1.8 on Linux
+sudo apt-get install openjdk-8-jdk
+Modify .profile:
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
