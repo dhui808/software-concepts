@@ -59,6 +59,7 @@ odo storage delete mystorage
 Adding a custom builder to specify a build image
 mkdir openjdk18 && cd openjdk18
 oc import-image openjdk18 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift --confirm
+(image stream is created)
 oc annotate istag/openjdk18:latest tags=builder
 odo create openjdk18 --git https://github.com/openshift-evangelists/Wild-West-Backend
 odo push
