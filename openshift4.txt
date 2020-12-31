@@ -21,7 +21,7 @@ Health check via Spring Boot Actuator
                      port: 8082
     where springbootstarter is the web application context root
     8082 is the web application port
-
+===================================================================================================================================
 Installing odo on Linux
   sudo curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
   sudo chmod +x /usr/local/bin/odo
@@ -80,3 +80,23 @@ sudo apt update
 sudo apt install maven
 Maven home: /usr/share/maven
 
+cd ~/openshift/openjdk18/my_components/backend
+mvn package
+odo create --s2i openjdk18 backend --binary target/wildwest-1.0.jar
+odo config view
+odo push
+odo log -f
+
+cd ..
+git clone https://github.com/openshift/nodejs-ex frontend
+cd frontend
+odo create --s2i nodejs frontend
+
+Link the current front-end component to the back end:
+odo link backend --port 8080
+
+Create an external URL for the application:
+odo url create frontend --port 8080
+odo push
+Route frontend-app is created
+==========================================================================================================================
