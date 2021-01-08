@@ -1,0 +1,13 @@
+If SSL is enabled, need JVM settings:
+ 
+-Djavax.net.ssl.trustStore=javaclient.jks
+-Djavax.net.ssl.trustStorePassword=password
+-Djavax.net.ssl.keyStore=javaclient.jks
+-Djavax.net.ssl.keyStorePassword=password
+
+If using non-IBM JRE (Oracle/OpenJDK), also need:
+-Dcom.ibm.mq.cfg.useIBMCipherMappings=false
+
+If using Java Before Java 8 Update 151, need to  install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy files.
+If using Java 8 Update 151 and higher, need to enable unlimited Strength Jurisdiction Policy
+(https://github.com/open-eid/cdoc4j/wiki/Enabling-Unlimited-Strength-Jurisdiction-Policy)
