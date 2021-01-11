@@ -1,0 +1,72 @@
+Database Normalization
+
+First Normal Form (1NF): 
+  Each column Contains only an atomic value
+  There are no repeating groups
+Original table design:
+CREATE TABLE PRODUCT (
+   PRODUCT_ID       INT              NOT NULL,
+   COLOR      VARCHAR(100)           NOT NULL,
+   PRICE      DECIMAL                NOT NULL,
+   PRIMARY KEY (PRODUCT_ID)
+);
+The COLOR column contains data like red, green - not automic
+
+The first normal form:
+
+
+Second Normal Form (2NF): All the non-key columns are dependent on the table’s primary key (the whole key)
+
+Original table design:
+CREATE TABLE PURCHASE_DETAIL(
+   CUST_ID       INT              NOT NULL,
+   STORE_ID      INT              NOT NULL,
+   Purchase_Location           VARCHAR(100) NOT NULL,
+   PRIMARY KEY (CUST_ID, STORE_ID)
+);
+[Purchase_Location] only depends on [Store_ID], which is only part of the primary key.
+
+The second normal form:
+CREATE TABLE PURCHASE (
+   CUST_ID       INT              NOT NULL,
+   STORE_ID      INT              NOT NULL,
+   PRIMARY KEY (CUST_ID, STORE_ID)
+);
+CREATE TABLE STORE (
+   STORE_ID      INT              NOT NULL,
+   Purchase_Location           VARCHAR(100) NOT NULL,
+   PRIMARY KEY (STORE_ID)
+);
+
+Third Normal Form (3NF): All nonprimary fields are dependent on the primary key (nothing but the key)
+
+Original table design:
+CREATE TABLE CUSTOMERS(
+   CUST_ID       INT              NOT NULL,
+   CUST_NAME     VARCHAR (20)      NOT NULL,
+   DOB           DATE,
+   STREET        VARCHAR(200),
+   CITY          VARCHAR(100),
+   STATE         VARCHAR(100),
+   ZIP           VARCHAR(12),
+   EMAIL_ID      VARCHAR(256),
+   PRIMARY KEY (CUST_ID)
+);
+STREET, CITY and STATE depend on ZIP, which is not PK (transitive dependency)
+
+The third normal form:
+CREATE TABLE ADDRESS(
+   ZIP           VARCHAR(12),
+   STREET        VARCHAR(200),
+   CITY          VARCHAR(100),
+   STATE         VARCHAR(100),
+   PRIMARY KEY (ZIP)
+);
+CREATE TABLE CUSTOMERS(
+   CUST_ID       INT              NOT NULL,
+   CUST_NAME     VARCHAR (20)      NOT NULL,
+   DOB           DATE,
+   ZIP           VARCHAR(12),
+   EMAIL_ID      VARCHAR(256),
+   PRIMARY KEY (CUST_ID)
+);
