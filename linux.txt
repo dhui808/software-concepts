@@ -9,3 +9,8 @@ inside does not treat it as its own special character, but rather passes it to f
 
 or
 find . -name .svn | xargs rm -fr
+
+2. Check if two files are the same:
+diff file1 file2
+No output means no difference
+
