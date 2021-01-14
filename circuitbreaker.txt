@@ -1,0 +1,14 @@
+
+The Circuit Breaker pattern prevents an application from performing an operation that is likely to fail.
+
+A circuit breaker acts as a proxy for operations that might fail. The proxy should monitor the number of recent failures that have occurred, and use this information to decide whether to allow the operation to proceed, or simply return an exception immediately.
+
+Circuit Breaker stops cascading failures caused by the downstream service failure and gives overwhelmed or failing services time to recover.
+
+ transient faults, such as slow network connections, timeouts, or the resources being overcommitted or temporarily unavailable. 
+
+Circuit Breaker deals with system failure like service crash or timeout, but not the user error and programming errors. However, whether it is able to differciate different errors is a different problem.
+
+References
+https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
+https://martinfowler.com/bliki/CircuitBreaker.html
