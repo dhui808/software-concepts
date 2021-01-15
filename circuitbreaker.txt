@@ -7,7 +7,7 @@ Circuit Breaker stops cascading failures caused by the downstream service failur
 
  transient faults, such as slow network connections, timeouts, or the resources being overcommitted or temporarily unavailable. 
 
-Circuit Breaker deals with system failure like service unavailable or timeout, but not the user error and programming errors. However, whether it is able to differciate different errors is a different problem.
+Circuit Breaker deals with system failure like service unavailable or timeout, but not the user error and programming errors. However, whether it is able to differentiate different errors is a different problem - it probably can not.
 
 References
 https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
