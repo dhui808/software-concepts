@@ -9,6 +9,8 @@ Circuit Breaker stops cascading failures caused by the downstream service failur
 
 Circuit Breaker deals with system failure like service unavailable or timeout, but not the user error and programming errors. However, whether it is able to differentiate different errors is a different problem - it probably can not.
 
+In Spring Cloud Hystrix, one can pass Throwable e as input parameter to the fallback method. In this way one can retrieve the original exception wrapped inside.
+
 References
 https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 https://martinfowler.com/bliki/CircuitBreaker.html
