@@ -9,3 +9,10 @@ Simula
   
   OO feature(s) NOT in Simula:
     1. Encapsulation.
+
+CLU
+  Parameterized types (parametric polymorphism, Templates/Generics)
+  Exception handling
+  Iterators
+  Multiple assignment
+  
