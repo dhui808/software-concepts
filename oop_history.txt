@@ -1,0 +1,11 @@
+Simula
+  Object-oriented features in Simula:
+    1. Classes
+    2. Objects (with instance variables and methods/member functions)
+    3. Inheritance / Derivation (Smalltalk/C++ terminology)
+    4. Subtyping
+    5. "Virtual" methods (methods that can be redefined in derived classes)
+    6. "Inner":
+  
+  OO feature(s) NOT in Simula:
+    1. Encapsulation.
