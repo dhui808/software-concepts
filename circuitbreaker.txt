@@ -16,7 +16,10 @@ https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 https://martinfowler.com/bliki/CircuitBreaker.html
 
 ########################################################################################################################################################################
-Spring Cloud Hystrix: the fallback method, if defined, is always invoked regardless of @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "4") setting
+Spring Cloud Hystrix: 
+  The fallback method, if defined, is always invoked regardless of @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "4") setting
+  The Throwable parameter in the fallback method always has null cause the root cause exception is swallowed. This is bad.
+  
 1. Service down, no fallback:
 com.netflix.hystrix.exception.HystrixRuntimeException: readingList timed-out and fallback failed.
 Caused by: java.util.concurrent.TimeoutException
