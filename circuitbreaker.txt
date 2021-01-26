@@ -14,3 +14,48 @@ In Spring Cloud Hystrix, one can pass Throwable e as input parameter to the fall
 References
 https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 https://martinfowler.com/bliki/CircuitBreaker.html
+
+########################################################################################################################################################################
+Spring Cloud Hystrix: the fallback method, if defined, is always invoked regardless of @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "4") setting
+1. Service down, no fallback:
+com.netflix.hystrix.exception.HystrixRuntimeException: readingList timed-out and fallback failed.
+Caused by: java.util.concurrent.TimeoutException
+
+2. Service call timeout, no fallback
+com.netflix.hystrix.exception.HystrixRuntimeException: readingList timed-out and fallback failed.
+Caused by: java.util.concurrent.TimeoutException
+
+3. Application programming error, no fallback
+org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 : [{"timestamp":"2021-01-16T18:21:53.828+00:00","status":500,"error":"Internal Server Error","message":"","path":"/recommended"}]
+
+4. Service down, with fallback
+fallback method invoked.
+com.netflix.hystrix.exception.HystrixTimeoutException
+
+5. Service call timeout, with fallback
+fallback method invoked.
+com.netflix.hystrix.exception.HystrixTimeoutException
+
+6. Application programming error, with fallback
+fallback method invoked.
+org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 : [{"timestamp":"2021-01-16T19:01:02.923+00:00","status":500,"error":"Internal Server Error","message":"","path":"/recommended"}]
+
+7. service down, with fallback throwing exception
+fallback method invoked.
+com.netflix.hystrix.exception.HystrixTimeoutException
+2021-01-17 18:45:44.311 ERROR 9068 --- [ HystrixTimer-1] c.n.h.c.javanica.command.GenericCommand  : failed to processed fallback is the method: 'reliable'. 
+com.netflix.hystrix.exception.HystrixRuntimeException: readingList timed-out and fallback failed.
+Caused by: java.util.concurrent.TimeoutException
+
+8. service call timeout, with fallback throwing exception
+fallback method invoked.
+com.netflix.hystrix.exception.HystrixTimeoutException
+2021-01-26 11:27:56.867 ERROR 21332 --- [ HystrixTimer-1] c.n.h.c.javanica.command.GenericCommand  : failed to processed fallback is the method: 'reliable'. 
+com.netflix.hystrix.exception.HystrixRuntimeException: readingList timed-out and fallback failed.
+Caused by: java.util.concurrent.TimeoutException
+
+9. Application programming error, with fallback throwing exception
+fallback method invoked.
+org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 : [{"timestamp":"2021-01-26T16:33:17.682+00:00","status":500,"error":"Internal Server Error","message":"","path":"/recommended"}]
+2021-01-26 11:33:17.708 ERROR 2296 --- [x-BookService-1] c.n.h.c.javanica.command.GenericCommand  : failed to processed fallback is the method: 'reliable'. 
+java.lang.RuntimeException: reliable throws exception.
