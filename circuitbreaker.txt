@@ -16,6 +16,10 @@ https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 https://martinfowler.com/bliki/CircuitBreaker.html
 
 ########################################################################################################################################################################
+The Hystrix circuit will break if:
+
+within a timespan of duration metrics.rollingStats.timeInMilliseconds, the percentage of actions resulting in a handled exception exceeds errorThresholdPercentage, provided also that the number of actions through the circuit in the timespan is at least requestVolumeThreshold
+########################################################################################################################################################################
 Spring Cloud Hystrix: 
   The fallback method, if defined, is always invoked regardless of @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "4") setting
   The Throwable parameter in the fallback method always has null cause the root cause exception is swallowed. This is bad.
