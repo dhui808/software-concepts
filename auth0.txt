@@ -1,0 +1,2 @@
+https://auth0.com/blog/spring-boot-authorization-tutorial-secure-an-api-java/
+https://github.com/auth0-blog/menu-api-spring-boot-java
