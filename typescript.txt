@@ -1,0 +1,9 @@
+With TypeScript 2.9, --resolveJsonModule allows for importing, extracting types from and generating .json files.
+  // tsconfig.json
+  {
+      "compilerOptions": {
+          "module": "commonjs",
+          "resolveJsonModule": true,
+          "esModuleInterop": true
+      }
+  }
