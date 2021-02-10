@@ -1,0 +1,4 @@
+for async calls, retry should be made inside the async calls.
+for sync calls and falsely used async calls, retry can be made outside the sync/async calls.
+
+Spring Retry framework (and any other frameworks) is not able to handle the retry if the service fails due to a dependency unavailability.
