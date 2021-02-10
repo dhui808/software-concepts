@@ -25,4 +25,4 @@ JVM generates system level threads while Asynch generates app level threads.
 
 Bad use cases for Async calls:
 1. Calling Okta for tokens - the rest calls must have the Okta token!
-2. The last rest call in a flow - we do not have the the next remote call that needs to be made in parallel!
+2. The last rest call in a flow - we do not have the the next remote call that needs to be made in parallel! Just leave it to run in the main thread.
