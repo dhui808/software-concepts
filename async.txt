@@ -2,7 +2,7 @@ Call Enstream to validate home phone and mobile phone
 
 https://stackify.com/when-to-use-asynchronous-programming/ 
 
-Asynch does not make sense: 
+Async does not make sense: 
 if two independent calls need to access the same (shared) resources
 if 2nd call depends on the results from the 1st call
 simple program
@@ -22,3 +22,7 @@ Or, we can say that the system has resources available to handle the 2nd task wi
 The resources are available if either they have not reached the maximum capacity or are scalable.
 
 JVM generates system level threads while Asynch generates app level threads.
+
+Bad use cases for Async calls:
+1. Calling Okta for tokens - the rest calls must have the Okta token!
+2. The last rest call in a flow - we do not have the the next remote call that needs to be made in parallel!
