@@ -15,6 +15,9 @@ public class VendorProductsJsonParser {
 
 		System.out.println("Read vendor product from " + Constants.VENDOR_FILE_PATH);
 		
+		//Constants.VENDOR_FILE_PATH="resources/vendor.json". This works only if running the app from batch file and folder "resources"
+		//is located at the folder as the batch file
+		//if the JSON is located under resources/vendor.json in the classpath, try using ./resources/vendor.json instead.
 		List<VendorWebModel> vendors = mapper.readValue(
 				new File(Constants.VENDOR_FILE_PATH), 
 				new TypeReference<List<VendorWebModel>>() {
