@@ -1,0 +1,13 @@
+Unexpected errors: they should not happen but they happen
+  Programming error: the error that happens in the application we are responsible for. Use generic error code identifying our app, e.g. ABC_999
+  Data error: the error is caused by another application we are not responsible for. In other words, it is a programming error in other team's applications. 
+  For example, teh database query does not returns order details record, or remote call does not return the transaction details. Using a generic error code
+  idenfigying the app, e.g. DB_99, CRM_999. (However, in some cases, it is normnal business scenario where DB or remote system returns empty list.)
+  Unhandled server exception from a dependency: HTTP 500. Use error code like CRM_HTTP_500. HTTP error could also come from HTTP server due to HTTP server configuration error.
+  Missing HTTP resources: HTTP 404. (could be client side configuration error, or missing server side HTTP resources or server side application not deployed/running)
+
+Expected errors: the erro makes sense for the business people. Use a specific error code for each case.
+  Business validation error
+  Remote call timeout, e.g. CRM_TIMEOUT
+  Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED
+  Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP_502, CRM_HTTP_503, etc.
