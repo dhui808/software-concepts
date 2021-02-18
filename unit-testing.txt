@@ -1,0 +1,6 @@
+The traditional method-level unit testing is not practically for applicatiins (as opposed to SDK/frameworks), for two important reasons:
+
+1. It is not aligned with the business use cases and QA test cases.
+2. The number of the test cases is overwhelming - not maintainable.
+
+Module-level (service-level) integration testing is preferable.
