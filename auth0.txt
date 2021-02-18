@@ -73,4 +73,28 @@ Set up Auth0 Authentiction and Authorization
 	https://express.menu-api.danny.com
 	API URL
 	http://localhost:7000
-	###########################################################################################################################################
+###########################################################################################################################################
+https://auth0.com/blog/use-typescript-to-create-a-secure-api-with-nodejs-and-express-adding-role-based-access-control
+Role-Based Access Control
+On the Auth0 side
+	Create permissions for the API.
+		Enable role-based access control (RBAC) authorization for the API
+		Enable Add Permissions in the Access Token
+	Create a role called menu-admin.
+	Assign permissions from the API to the menu-admin role.
+	Create a new user and assign to it the menu-admin role.
+	Add the menu-admin role permissions to the access token created for users with the role.
+		Auth0 attaches the menu-admin role permissions as a claim to the Access token.
+		Use Auth0 Rules to include the user role as a claim in the ID token and Access token.
+On the server side
+	Define the menu-admin role permissions in a TypeScript enum.
+	Define the permissions required to access an endpoint by passing permission values as arguments 
+	to an authorization middleware function, which Express calls before the endpoint route handler.
+	Implement the authorization middleware function to determine authorization by comparing the 
+	permissions required by the endpoint against the permissions present in a user's access token.
+
+By mounting the checkJwt middleware function as a router-level middleware with one line of code 
+itemsRouter.use(checkJwt), you are protecting all the endpoints that follow it against invalid 
+access tokens. Then, you call the checkPermissions middleware before the endpoint logic is reached
+to protect the endpoint against clients with invalid permissions.
+##########################################################################################################################################
