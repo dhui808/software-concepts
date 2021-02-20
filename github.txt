@@ -1,0 +1,6 @@
+How to change your default git branch name to main?
+  git config --global --list
+WHich displays a list of Git configuration.
+Go to the folder as idenfified by the key "init.templatedir"
+Add a file named HEAD and add the following lines:
+  ref: refs/heads/main
