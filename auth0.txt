@@ -98,3 +98,7 @@ itemsRouter.use(checkJwt), you are protecting all the endpoints that follow it a
 access tokens. Then, you call the checkPermissions middleware before the endpoint logic is reached
 to protect the endpoint against clients with invalid permissions.
 ##########################################################################################################################################
+Issuer in the token has the following format:
+https:/<Auth0 Domain>/
+So the API side should define the issuer accordingly.
+
