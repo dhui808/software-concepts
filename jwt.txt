@@ -1,0 +1,2 @@
+https://jwt.io/
+to Examine your JWT token, copy request Authorization and remove Bearer, and inspect the token in jwt.io.
