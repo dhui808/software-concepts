@@ -102,3 +102,32 @@ Issuer in the token has the following format:
 https:/<Auth0 Domain>/
 So the API side should define the issuer accordingly.
 
+Decoded Token:
+Header:
+	{
+	  "alg": "RS256",
+	  "typ": "JWT",
+	  "kid": "phfeI0v32THKb7ucZajOf"
+	}
+
+Payload:
+	{
+	  "https://menu-api.danny.com/roles": [
+	    "menu-admin"
+	  ],
+	  "iss": "https://dev-ha2csa52.us.auth0.com/",
+	  "sub": "auth0|602d9a737b428c006a754dc4",
+	  "aud": [
+	    "https://menu-api.danny.com",
+	    "https://dev-ha2csa52.us.auth0.com/userinfo"
+	  ],
+	  "iat": 1613780376,
+	  "exp": 1613866776,
+	  "azp": "WfMyDnM2WUpQ7AqI28AlCZyIQYh4UTAm",
+	  "scope": "openid profile email",
+	  "permissions": [
+	    "create:items",
+	    "delete:items",
+	    "update:items"
+	  ]
+	}
