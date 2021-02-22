@@ -22,6 +22,9 @@ Health check via Spring Boot Actuator
     where springbootstarter is the web application context root
     8082 is the web application port
 ===================================================================================================================================
+CLI download URL
+https://mirror.openshift.com/pub/openshift-v4/clients/
+###################################################################################################################################
 Installing odo on Linux
   sudo curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /usr/local/bin/odo
   sudo chmod +x /usr/local/bin/odo
