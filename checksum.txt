@@ -1,0 +1,12 @@
+Windows
+CertUtil -hashfile filename MD5 / CertUtil -hashfile filename SHA256
+
+Linux
+md5sum filename / sha256sum filename
+
+MacOS
+md5 filename / shasum -a 256 filename
+
+md5/sha256 checksum format:
+md5: ba411cafee2f0f702572369da0b765e2
+sha256: 2e17b6c1df874c4ef3a295889ba8dd7170bc5620606be9b7c14192c1b3c567aa
