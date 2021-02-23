@@ -1,3 +1,7 @@
+https://github.com/vdenotaris/spring-boot-security-saml-sample
+https://github.com/ulisesbocchio/spring-boot-security-saml-samples
+
+###########################################################################################################################################################
 Encoded SAML response:
 PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIElEPSJfMDQ0MDRmNDVjZjJhZjcxMTFlZmIiICBWZXJzaW9uPSIyLjAiIElzc3VlSW5zdGFudD0iMjAyMS0wMi0yMlQwMTowMTowOS4wNDZaIiAgRGVzdGluYXRpb249Imh0dHBzOi8vbWFuYWdlLmF1dGgwLmNvbS90ZXN0ZXIvc2FtbHAiPjxzYW1sOklzc3VlciB4bWxuczpzYW1sPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj51cm46ZGV2LWhhMmNzYTUyLnVzLmF1dGgwLmNvbTwvc2FtbDpJc3N1ZXI
 
