@@ -1,4 +1,5 @@
 https://spring.io/guides/gs/securing-web/
+https://docs.spring.io/autorepo/docs/spring-security-saml/1.0.x-SNAPSHOT/reference/htmlsingle/#configuration-logout
 https://github.com/vdenotaris/spring-boot-security-saml-sample
 https://github.com/ulisesbocchio/spring-boot-security-saml-samples
 
