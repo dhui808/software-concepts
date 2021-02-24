@@ -1,0 +1,4 @@
+String jsonFile = "/my_res.json";//my_res.json in classpath
+InputStream inputStream = MyClass.class.getResourceAsStream(jsonFile);
+Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+String result = s.hasNext() ? s.next() : "";
