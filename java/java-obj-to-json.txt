@@ -1,0 +1,3 @@
+  
+ObjectMapper mapper = new ObjectMapper();
+String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(javaObj);
