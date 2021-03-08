@@ -1,0 +1,4 @@
+When Hystrix is enabled, the exception passed to the fallback method is com.netflix.hystrix.exception.HystrixTimeoutException, if timeout occurres.
+When Hystrix is NOT enabled, the invoked method throws what exception? if timeout occurres.
+Spring RestTemplate does not set connectionTimeout and readTimeout to the HttpURLConnection?
+SimpleBufferingClientHttpRequest.executeInternal -> HttpURLConnection.connect(), getDoOutput()
