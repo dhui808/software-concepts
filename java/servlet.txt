@@ -1,0 +1,2 @@
+URL, URI, context pat:
+https://stackoverflow.com/questions/2222238/httpservletrequest-to-complete-url
