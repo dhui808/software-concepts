@@ -1,3 +1,5 @@
+In Docker Desktop for Windows, the user needs to added by admin user to docker-users group
+
 Log in
   docker login -u <username> -p <password>
 
