@@ -1,0 +1,20 @@
+Happy scenario
+  @InjectMocks
+  ErrorHandler errorHandler;
+  @Mock
+  MyConfig config;
+  @Mock
+  JmsTemplate jmsTemplate;
+  
+  when(config.getQueueEnabled()).thenReturn(true);
+  when(config.getErrorQueue()).thenReturn("errorQueue");
+  when(config.jmsTemplate()).thenReturn(jmsTemplate);
+  errorHandler.processError("SOAP", "ABC123");
+  verify(jmsTemplate).convertAndSend("SOAP", "ABC123");
+  
+Test Exception is thrown
+  when(config.getQueueEnabled()).thenReturn(true);
+  when(config.getErrorQueue()).thenReturn("errorQueue");
+  when(config.jmsTemplate()).thenThrow(Exception.class);
+  errorHandler.processError("SOAP", "ABC123");//no exception is thrown. errorHandler.processError swallows any exceptions.
+
