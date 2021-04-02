@@ -1,0 +1,1 @@
+internet -> <loadbalancer e.g. nginx, haproxy>:<servicePort> -> <mesos agent on which container runs>:<hostPort> -> <container>:<containerPort>
