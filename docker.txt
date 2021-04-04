@@ -15,6 +15,13 @@ docker ps
 
 docker container stop f63221907dc0
 
+To stop all containers:
+docker container stop $(docker container ls -aq)
+To remove all containers:
+docker container rm $(docker container ls -aq)
+To remove all containers, including their volumes:
+docker rm -vf $(docker ps -aq)
+To delete all images:
 docker rmi -f $(docker images -a -q)
 
 Vert.x
