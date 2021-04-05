@@ -1,4 +1,5 @@
 Happy scenario
+  @Autowired
   @InjectMocks
   ErrorHandler errorHandler;
   @Mock
@@ -28,4 +29,4 @@ public void mytest() throw Exception {
 
 MockitoJUnitRunner does not load Spring configuration. Use SpringRunner plus:
   @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
-  
+Applying  @Autowired to the bean with @InjectMocks so the Spring configuration can be injected into the bean.  
