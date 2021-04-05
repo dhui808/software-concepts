@@ -30,3 +30,6 @@ public void mytest() throw Exception {
 MockitoJUnitRunner does not load Spring configuration. Use SpringRunner plus:
   @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 Applying  @Autowired to the bean with @InjectMocks so the Spring configuration can be injected into the bean.  
+
+Verify a mock is not invoked
+  verifyNoMoreInteractions(<your mock1>, <your mock2>...);
