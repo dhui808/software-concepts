@@ -25,3 +25,7 @@ public void mytest() throw Exception {
   Observable o = Observable.just(e);
   when(myobj.method()).thenReturn(o);
 }
+
+MockitoJUnitRunner does not load Spring configuration. Use SpringRunner plus:
+  @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
+  
