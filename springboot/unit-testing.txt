@@ -1,0 +1,9 @@
+How to enable Spring configuration for testing?
+  If we have an application.yml file test/resources, we can load it by adding the below annotation to TestCOnfig.java:
+    @ContextConfiguration({"classpth:application.yml"})
+  And in the unit test class, we have the following annotations:
+    @RunWith(SpringRunner.class)
+    @ContextConfiguration(classes={TestConfig.class}, initializers=ConfigFileApplicationContextInitializer.class)
+    @TestExecutationListeners(listeners={SpringBootDependencyInjectionTestExecutionListener.class, ServletTestExecutionListener.class})
+    public MyTestClass {}
+  
