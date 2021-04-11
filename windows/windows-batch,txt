@@ -1,2 +1,8 @@
 https://www.dostips.com/DtTipsStringManipulation.php
 
+Find the string length:
+  set var=Hello World!
+  echo %var%> length.txt
+  for %%? in (length.txt) do ( set /a length=%%~z? - 2 )
+  echo %length%
+  del length.txt
