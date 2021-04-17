@@ -1,3 +1,6 @@
 https://brb.nci.nih.gov/seqtools/installUbuntu.html
 https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/
-
+downloaded 64-bit Ubuntu ISO file
+2 GHz dual core processor or better 
+4 GB system memory 
+25 GB of free hard drive space
