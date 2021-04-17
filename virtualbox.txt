@@ -1,2 +1,3 @@
+https://brb.nci.nih.gov/seqtools/installUbuntu.html
 https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/
 
