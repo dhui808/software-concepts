@@ -4,3 +4,7 @@ downloaded 64-bit Ubuntu ISO file
 2 GHz dual core processor or better 
 4 GB system memory 
 25 GB of free hard drive space
+MyUbuntu:
+5120 MB CPU
+2 cores
+30GB disk
