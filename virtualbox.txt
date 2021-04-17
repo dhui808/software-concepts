@@ -5,6 +5,6 @@ downloaded 64-bit Ubuntu ISO file
 4 GB system memory 
 25 GB of free hard drive space
 MyUbuntu:
-5120 MB CPU
-2 cores
+6144 MB CPU
+4 cores
 30GB disk
