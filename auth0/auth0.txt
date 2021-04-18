@@ -1,0 +1,133 @@
+https://auth0.com/blog/spring-boot-authorization-tutorial-secure-an-api-java/
+https://github.com/auth0-blog/menu-api-spring-boot-java
+https://github.com/auth0-blog/wab-ts-express-api
+
+#############################################################################################################################
+https://auth0.com/blog/use-typescript-to-create-a-secure-api-with-nodejs-and-express-adding-authentication-authorization/
+Set up Auth0 Authentiction and Authorization
+1. Set Auth0 API
+1.1 Create Ath0 API
+	Name
+	Identifier
+1.2 Generate API (backend) sample code (C#/Node.js/PHP)
+1.3 Configure API env:
+	PORT=7000
+	AUTH0_ISSUER=dev-ha2csa52.us.auth0.com
+	AUTH0_AUDIENCE=https://express.menu-api.danny.com
+2. Create API Authentication Middleware
+2.1 Create API Authentication function
+	import jwt from "express-jwt";
+	import jwksRsa from "jwks-rsa";
+	import * as dotenv from "dotenv";
+
+	dotenv.config();
+
+	export const checkJwt = jwt({
+	  secret: jwksRsa.expressJwtSecret({
+		cache: true,
+		rateLimit: true,
+		jwksRequestsPerMinute: 5,
+		jwksUri: `${process.env.AUTH0_ISSUER}.well-known/jwks.json`
+	  }),
+
+	  // Validate the audience and the issuer.
+	  audience: process.env.AUTH0_AUDIENCE,
+	  issuer: `${process.env.AUTH0_ISSUER}`,
+	  algorithms: ["RS256"]
+	});
+
+2.2. Mount the checkJwt middleware function before you mount your itemsRouter write endpoints.
+	// GET items/, not protected.
+	itemsRouter.get(...);
+
+	// Mount authorization middleware before all protected endpoints are defined.
+	itemsRouter.use(checkJwt);
+	
+	// POST items/
+	itemsRouter.post(...);
+
+	// PUT items/
+	itemsRouter.put(...);
+
+	// DELETE items/:id
+	itemsRouter.delete(...);
+
+3. Creating an Auth0 Client Application
+3.1 Create an Auth0 Client Application
+	From  Auth0 Applications section,
+	Name
+	Choose an application type: Single Page Web Application
+3.2 Configure Auth0 Client Application
+	Allowed Callback URLs
+	Allowed Web Origins
+	Allowed Logout URLs
+
+4. Configure Application (frontend)
+	Auth0 Domain
+	dev-ha2csa52.us.auth0.com
+	Auth0 Client ID
+	sJ0JQgszpAW2pr3h0czPdKhQI9MpIpTZ
+	Auth0 Callback URL
+	https://dashboard-v1.whatabyte.app/home
+	API Audience
+	https://express.menu-api.danny.com
+	API URL
+	http://localhost:7000
+###########################################################################################################################################
+https://auth0.com/blog/use-typescript-to-create-a-secure-api-with-nodejs-and-express-adding-role-based-access-control
+Role-Based Access Control
+On the Auth0 side
+	Create permissions for the API.
+		Enable role-based access control (RBAC) authorization for the API
+		Enable Add Permissions in the Access Token
+	Create a role called menu-admin.
+	Assign permissions from the API to the menu-admin role.
+	Create a new user and assign to it the menu-admin role.
+	Add the menu-admin role permissions to the access token created for users with the role.
+		Auth0 attaches the menu-admin role permissions as a claim to the Access token.
+		Use Auth0 Rules to include the user role as a claim in the ID token and Access token.
+On the server side
+	Define the menu-admin role permissions in a TypeScript enum.
+	Define the permissions required to access an endpoint by passing permission values as arguments 
+	to an authorization middleware function, which Express calls before the endpoint route handler.
+	Implement the authorization middleware function to determine authorization by comparing the 
+	permissions required by the endpoint against the permissions present in a user's access token.
+
+By mounting the checkJwt middleware function as a router-level middleware with one line of code 
+itemsRouter.use(checkJwt), you are protecting all the endpoints that follow it against invalid 
+access tokens. Then, you call the checkPermissions middleware before the endpoint logic is reached
+to protect the endpoint against clients with invalid permissions.
+##########################################################################################################################################
+Issuer in the token has the following format:
+https:/<Auth0 Domain>/
+So the API side should define the issuer accordingly.
+
+Decoded Token:
+Header:
+	{
+	  "alg": "RS256",
+	  "typ": "JWT",
+	  "kid": "phfeI0v32THKb7ucZajOf"
+	}
+
+Payload:
+	{
+	  "https://menu-api.danny.com/roles": [
+	    "menu-admin"
+	  ],
+	  "iss": "https://dev-ha2csa52.us.auth0.com/",
+	  "sub": "auth0|602d9a737b428c006a754dc4",
+	  "aud": [
+	    "https://menu-api.danny.com",
+	    "https://dev-ha2csa52.us.auth0.com/userinfo"
+	  ],
+	  "iat": 1613780376,
+	  "exp": 1613866776,
+	  "azp": "WfMyDnM2WUpQ7AqI28AlCZyIQYh4UTAm",
+	  "scope": "openid profile email",
+	  "permissions": [
+	    "create:items",
+	    "delete:items",
+	    "update:items"
+	  ]
+	}
