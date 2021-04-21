@@ -5,3 +5,8 @@ where option -w 0 means no wrap
 To base64 encode string:
 echo -n <string> | base64
 where option -n means ignore a new line character on the end of the line.
+
+To generate HTTP Authorization header from username:password:
+echo -n username:password | base64
+From the browser developer console:
+window.btoa("username:password")
