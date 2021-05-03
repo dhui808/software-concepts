@@ -1,0 +1,2 @@
+telnet <ip> <port>
+curl -v telnet://<ip>:port
