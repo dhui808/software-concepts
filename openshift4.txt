@@ -103,3 +103,6 @@ odo url create frontend --port 8080
 odo push
 Route frontend-app is created
 ==========================================================================================================================
+Transfer a file from Pod to local machine
+oc rsync <pod>:/path/to/file <local folder
+Need to download cwRsync and have it in the PATH.
