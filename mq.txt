@@ -11,3 +11,6 @@ If using non-IBM JRE (Oracle/OpenJDK), also need:
 If using Java Before Java 8 Update 151, need to  install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy files.
 If using Java 8 Update 151 and higher, need to enable unlimited Strength Jurisdiction Policy
 (https://github.com/open-eid/cdoc4j/wiki/Enabling-Unlimited-Strength-Jurisdiction-Policy)
+
+Test connectivity from OpenShift Pod terminal or local Windows terminal:
+curl -v telnet://<ip>:1414
