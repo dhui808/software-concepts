@@ -1,0 +1,3 @@
+When defining Multibranch pipeline to allow only a few branches, Select Filer by name (with regular expression) and enter the following value:
+  (dev|qa|uat|release)
+which allows only dev/qa/uat/release branch.
