@@ -1,0 +1,21 @@
+As of May 2021, Harness offers CD solution, and still needs Jenkins CI
+
+Jenkins CI builds and pushes Docker image to Nexus or other Docker image repo
+
+Needs to create a Jenkins pipeline for creating and pushing Helm Chart image to the Docker image repo.
+
+In Harness console, admin Adds Application and Cloud Provider (per cloud cluster)  .
+The dev team adds the Service, Environment, Deployment artifacts to the Application.
+
+Service: service name is mapped to Helm Release.name
+
+Environemnt:
+  Environment Type: Production or Non Production. This drives what Cloud Providers are available when creating Infrastructure Definition.
+  Infrastructure Definition Namespace is mapped to Helm Release.Namespace
+
+Deployment:
+  When clicking Deploy button, need to select Service, Environment and Infrastructure Definition
+
+Trigger: optional
+
+Pipeline: optional
