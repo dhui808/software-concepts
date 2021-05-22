@@ -1,0 +1,9 @@
+https://www.twilio.com/docs/glossary/what-is-a-webhook
+
+Webhooks are user-defined HTTP callbacks. 
+
+Twilio uses webhooks to let your application know when events happen, such as receiving 
+an SMS message or getting an incoming phone call. When the event occurs, Twilio makes 
+an HTTP request (usually a POST or a GET) to the URL you configured for the webhook. 
+Twilio's request will include details of the event such as the incoming phone number or 
+the body of an incoming message.
