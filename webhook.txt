@@ -9,7 +9,7 @@ an HTTP request (usually a POST or a GET) to the URL you configured for the webh
 Twilio's request will include details of the event such as the incoming phone number or 
 the body of an incoming message.
 
-Webhooks allow the applications to respond for certain events.
+Webhooks allow the applications to respond to certain events.
 Three paticipants: Event Sender, Webhook Provider and Application (Webhook Handler)
 
 Webhook Setup:
