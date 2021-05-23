@@ -32,4 +32,4 @@ Webhook scenarios:
    is sent to the phone as response.
 3. A SMS/MMS message is dilivered to a mobile. Twilio calls back the application to
    report the delivery status of the message, and the application may just log it.
-   
+4. A GitHub webhook to trigger a build automatically in OpenShift when the change is pushed to GitHub   
