@@ -1,0 +1,11 @@
+https://www.gitops.tech/
+
+GitOps is a way of implementing Continuous Deployment for cloud native applications.
+
+The core idea of GitOps is having a Git repository that always contains declarative descriptions 
+of the infrastructure currently desired in the production environment and an automated process 
+to make the production environment match the described state in the repository. If you want to 
+deploy a new application or update an existing one, you only need to update the repository - 
+the automated process handles everything else.
+
+GitOps: versioned CI/CD on top of declarative infrastructure. Stop scripting and start shipping.
