@@ -1,0 +1,8 @@
+Windows 10 has built-in ssh client. Uses Windows PowerShell terminal.
+
+Log in to vm:
+  ssh lab-user@studentvm.gp4gd.example.opentlc.com
+  
+Copy file from vm to local:
+  scp -r lab-user@studentvm.gp4gd.example.opentlc.com:/home/lab-user/coffee-shop-source/coffee-shop/coffee-shop.yaml .
+  
