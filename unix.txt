@@ -1,1 +1,0 @@
-https://unix.stackexchange.com/questions/254711/history-of-unix-not-including-current-directory-in-path
