@@ -11,3 +11,11 @@ data:
   {{ . }}: |-
         {{ $files.Get . }}
   {{- end }}
+  
+Another solution
+kind: ConfigMap
+metadata:
+  name: splunk-master-configmap
+data:
+  {{ (.Files.Glob "files/indexes.conf").AsConfig | indent 2 }}
+  {{ (.Files.Glob "files/otherfile.conf").AsConfig | indent 2 }}
