@@ -1,0 +1,3 @@
+Extract field form JSON using python:
+curl -s -H "Authorization: token=mytoken" http://xyz.example.com/service/marathon/v2/apps | python -c 'import sys, json; print(json.load(sys.stdin)["app"]["labels"])'
+
