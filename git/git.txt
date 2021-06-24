@@ -8,3 +8,6 @@ How to create new branch from the current branch and push it to remote?
 git checkout -b new_branch
 git push -u origin new_branch
 Note: unstaged local changes are not committed and pushed to the remote.
+
+How to display the parent branches of the current branch?
+git log --decorate --simplify-by-decoration --oneline
