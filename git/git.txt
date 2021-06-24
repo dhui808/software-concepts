@@ -2,4 +2,9 @@ How to roll back "develop" branch to a specific tag "PRE_REL_1.1"?
 https://stackoverflow.com/questions/6872223/how-do-i-revert-master-branch-to-a-tag-in-git
 git checkout develop
 git reset --hard PRE_REL_1.1
-git push --force origin master
+git push --force origin develop
+
+How to create new branch from the current branch and push it to remote?
+git checkout -b new_branch
+git push -u origin new_branch
+Note: unstaged local changes are not committed and pushed to the remote.
