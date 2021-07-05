@@ -1,8 +1,12 @@
+https://www.thewindowsclub.com/change-boot-order-in-windows
+https://www.ubackup.com/windows-10/windows-10-bootable-usb-not-working.html#:~:text=%20There%20are%20some%20other%20reasons%20that%20may,from%20USB%20in%20Windows%2010%2C%20not...%20More%20
+
 Windows 10
 Settings > Update & Security > Recovery > Advanced Startup > Restart now
-Troubleshoot > Advanced Options > UEFI Firmware Settings
+Troubleshoot > Advanced Options > UEFI Firmware Settings > Restart
 Navigate to Boot tab
-Move up USB as the first item
+Boot Priority Order
+Move up USB HDD as the first item
 Navigate to Security tab
-Make Secure Boot Disabled.
+Make Secure Boot Disabled. (otherwise, USB HDD is ignored)
 F10 (Save & Exit)
