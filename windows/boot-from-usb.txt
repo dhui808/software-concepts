@@ -1,0 +1,8 @@
+Windows 10
+Settings > Update & Security > Recovery > Advanced Startup > Restart now
+Troubleshoot > Advanced Options > UEFI Firmware Settings
+Navigate to Boot tab
+Move up USB as the first item
+Navigate to Security tab
+Make Secure Boot Disabled.
+F10 (Save & Exit)
