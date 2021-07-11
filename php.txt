@@ -1,0 +1,11 @@
+PROJECT ROOT
+|--composer.json
+|--index.php
+|--README.md
+|--.htaccess
+|--docs //for documentation files
+|--tests //for Unit Tests
+|--vendor //for external libraries (if everything isn't included through composer)
+|--examples //examples of the library being used
+|--config //any configuration files you may have
+|--src  //where the library's actual code "lives"
