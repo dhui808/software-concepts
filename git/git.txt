@@ -4,6 +4,10 @@ git checkout develop
 git reset --hard PRE_REL_1.1
 git push --force origin develop
 
+How to roll back "main" branch to a specific commit "4f6e03d"?
+git reset --hard 4f6e03d
+git push --force origin main
+
 How to create new branch from the current branch and push it to remote?
 git checkout -b new_branch
 git push -u origin new_branch
