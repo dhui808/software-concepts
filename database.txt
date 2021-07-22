@@ -24,6 +24,7 @@ CREATE TABLE PRODUCT_COLOR (
 );
 
 Second Normal Form (2NF): All the non-key columns are dependent on the table’s primary key (the whole key)
+A table that is in 1st normal form and contains only a single key as the primary key is automatically in 2nd normal form.
 
 Original table design:
 CREATE TABLE PURCHASE_DETAIL(
