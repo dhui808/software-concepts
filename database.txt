@@ -2,7 +2,7 @@ Database Normalization
 
 First Normal Form (1NF): 
   Each column Contains only an atomic value
-  There are no repeating groups
+  There are no repeating groups: For example, a table with the following columns: [Book ID], [Author 1], [Author 2], [Author 3]
 Original table design:
 CREATE TABLE PRODUCT (
    PRODUCT_ID       INT              NOT NULL,
@@ -10,10 +10,18 @@ CREATE TABLE PRODUCT (
    PRICE      DECIMAL                NOT NULL,
    PRIMARY KEY (PRODUCT_ID)
 );
-The COLOR column contains data like red, green - not automic
+The COLOR column contains data like "red, green" - not automic
 
 The first normal form:
-
+CREATE TABLE PRODUCT_PRICE (
+   PRODUCT_ID       INT              NOT NULL,
+   PRICE      DECIMAL                NOT NULL,
+   PRIMARY KEY (PRODUCT_ID)
+);
+CREATE TABLE PRODUCT_COLOR (
+   PRODUCT_ID       INT              NOT NULL,
+   COLOR      VARCHAR(100)           NOT NULL
+);
 
 Second Normal Form (2NF): All the non-key columns are dependent on the table’s primary key (the whole key)
 
