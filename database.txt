@@ -48,6 +48,7 @@ CREATE TABLE STORE (
 );
 
 Third Normal Form (3NF): All nonprimary fields are dependent on the primary key (nothing but the key)
+(There is no transitive functional dependency)
 
 Original table design:
 CREATE TABLE CUSTOMERS(
