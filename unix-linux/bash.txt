@@ -1,0 +1,10 @@
+while [ condition ]
+do
+   command1
+   command2
+   command3
+done
+
+while [ condition ]; do commands; done
+
+while control-command; do COMMANDS; done
