@@ -1,0 +1,2 @@
+1. To validate a JSON file
+    py -m json.tool package.json
