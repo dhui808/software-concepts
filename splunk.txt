@@ -1,0 +1,6 @@
+1. Create Splunk Alert
+   Create a search.
+   Save As - Alert
+   In Add Actions dropdown, select Send email or Send to mobile
+   Enter the necessary information
+   
