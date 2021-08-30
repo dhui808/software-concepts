@@ -17,3 +17,7 @@ No output means no difference
 #### 3. File/folder permissions
 The g=u argument from the chmod command makes the group permissions equal to the owner user 
 permissions, which by default are read and write. Use the g+rwX argument with the same results.
+
+### 4. Check if Linux is 32-bit or 64-bit
+lscpu
+The “Architecture” entry tells you what type of CPU you have (where “x86_32” signifies 32-bit and “x86_64” signifies 64-bit)
