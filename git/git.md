@@ -31,3 +31,20 @@
 
 ## How to display the parent branches of the current branch?
   git log --decorate --simplify-by-decoration --oneline
+
+## How to undo the latest commit?
+  git reset HEAD~  
+
+## How to revert a merge commit that's already pushed to remote branch?
+  git reset --hard <commit-hash-prior-to-merge>
+  git push -f origin <remote-branch-name>
+  
+  Another approach from SourceTree:
+  Right-click the previous commit where we want to go back to – > Reset feature/myfeature to this commit
+
+## How to revert a commit pushed to the remote repo?
+  http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+  git log
+  git revert 29ce4c1
+  git push
+ 
