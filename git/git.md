@@ -43,7 +43,6 @@
   Right-click the previous commit where we want to go back to – > Reset feature/myfeature to this commit
 
 ## How to revert a commit pushed to the remote repo?
-  http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
   git log
   git revert 29ce4c1
   git push
