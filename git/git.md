@@ -22,7 +22,10 @@
 
 ## How to roll back "main" branch to a specific commit "4f6e03d"?
   git reset --hard 4f6e03d  
-  git push --force origin main  
+  git push --force origin main 
+  
+## How to switch git branch
+git checkout branch_name
 
 ## How to create new branch from the current branch and push it to remote?
   git checkout -b new_branch  
