@@ -38,6 +38,9 @@ git checkout branch_name
 ## How to undo the latest commit?
   git reset HEAD~  
 
+## To discard local changes to all files, permanently: 
+  git reset --hard
+  
 ## How to revert a merge commit that's already pushed to remote branch?
   git reset --hard <commit-hash-prior-to-merge>  
   git push -f origin <remote-branch-name>
