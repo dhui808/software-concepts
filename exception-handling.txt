@@ -8,6 +8,7 @@ Unexpected errors: they should not happen but they happen
 
 Expected errors: the erro makes sense for the business people. Use a specific error code for each case.
   Business validation error
+  Dependency system error
   Remote call timeout, e.g. CRM_TIMEOUT
   Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED
   Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP_502, CRM_HTTP_503, etc.
