@@ -12,3 +12,17 @@ Expected errors: the erro makes sense for the business people. Use a specific er
   Remote call timeout, e.g. CRM_TIMEOUT
   Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED
   Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP_502, CRM_HTTP_503, etc.
+
+HTTP status   Error       User Problem?   Dev Problem?    Operation Problem?
+200                                                       
+400                       N               Y               N
+401                       Y               Y               Y           
+403                       N               Y               Y                                              
+404                       Y               Y               N
+500                       N               Y               N
+501                       N               Y               N
+502                       N               N               Y
+503                       N               Y               Y 
+504                       N               N               Y
+            Timeout       N               N               Y
+            Unreachable   N               Y               Y
