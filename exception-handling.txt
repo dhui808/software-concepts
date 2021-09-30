@@ -23,7 +23,7 @@ HTTP status   Error             User Problem?   Dev Problem?    Operation Proble
 500                             N               Y               N
 501                             N               Y               N
 502                             N               N               Y
-503                             N               Y               Y 
+503                             N               N               Y 
 504                             N               N               Y
             Timeout             N               N               Y
             Unreachable         N               Y               Y
