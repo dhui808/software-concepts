@@ -24,6 +24,15 @@ Expected errors: the erro makes sense for the business people. Use a specific er
   Authentication error HTTP 401. Category: AUTH_ERROR
   Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP502, CRM_HTTP503, etc. Category: NETWORK_ERROR
 
+Error Handling strategy:
+  Unexpected errors (APP_ERROR,DATA_ERROR, DEPENENCY_UNHANDLED_ERROR): Dev team need to investigate immediately. Nedd to have a data error source field ot identify which team.
+  Expected errors: 
+    USER_INPUT_ERROR: No action
+    SSL_ERROR: Dev team action
+    AUTH_ERROR: May need to check auth configuration
+    TIMEOUT_ERROR, CONN_ERROR, NETWORK_ERROR: DevOps/Infrature team action if persisting
+    DEPENENCY_HANDLED_ERROR: if the error code is generic, dev team takes action.
+    
 Assume we are calling a API named "ABC", we may use the table below to map errors.
 
 HTTP status   Error             User Problem?   Dev Problem?    Operation Problem?    Error Code    ABC Response body
