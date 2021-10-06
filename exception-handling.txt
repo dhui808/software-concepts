@@ -12,13 +12,16 @@ Unexpected errors: they should not happen but they happen
     configuration error. Category: DEPENENCY_UNHANDLED_ERROR
   Missing HTTP resources: HTTP 404. (could be client side configuration error, or missing server side HTTP resources or server side application not deployed/running)
     Category: APP_ERROR
-
+  HTTP 400: Category: APP_ERROR
+  HTTP 403: Category: APP_ERROR
+  
 Expected errors: the erro makes sense for the business people. Use a specific error code for each case.
   User input validation error (business validation error). Category:USER_INPUT_ERROR
   Dependency handled error. Category: DEPENENCY_HANDLED_ERROR
   Remote call timeout, e.g. CRM_TIMEOUT.  Category: TIMEOUT_ERROR
   Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED. Category: CONN_ERROR
   SSL error: certificate issues. Category: SSL_ERROR
+  Authentication error HTTP 401. Category: AUTH_ERROR
   Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP502, CRM_HTTP503, etc. Category: NETWORK_ERROR
 
 Assume we are calling a API named "ABC", we may use the table below to map errors.
