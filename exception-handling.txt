@@ -1,18 +1,25 @@
+Business logic error (programming logic error): No error code. Normal response is returned to the client side.
+
 Unexpected errors: they should not happen but they happen
-  Programming error: the error that happens in the application we are responsible for. Use generic error code identifying our app, e.g. ABC_999
-  Data error: the error is caused by another application we are not responsible for. In other words, it is a programming error in other team's applications. 
-  For example, teh database query does not returns order details record, or remote call does not return the transaction details. Using a generic error code
-  idenfigying the app, e.g. DB_99, CRM_999. (However, in some cases, it is normnal business scenario where DB or remote system returns empty list.)
-  Unhandled server exception from a dependency: HTTP 500. Use error code like CRM_HTTP_500. HTTP error could also come from HTTP server due to HTTP server 
-  configuration error.
+  Application Runtime error: the application internal error that happens in runtime in the application we are responsible for. Category:APP_ERROR
+    Examples: ArrayIndexOutOfBoundsException, NullPointerException, IllegalArgumentException, IOException (it is not a RuntimeException)
+    Use generic error code identifying our app, e.g. ABC_999
+  Data validation error: the error is caused by another application we are not responsible for. In other words, it is a programming error in other team's applications. 
+    For example, teh database query does not returns order details record, or remote call does not return the transaction details. Using a generic error code
+    idenfigying the app, e.g. DB_99, CRM_999. (However, in some cases, it is normnal business scenario where DB or remote system returns empty list.)
+    Category: DATA_ERROR
+  Unhandled server exception from a dependency: HTTP 500. Use error code like CRM_HTTP500. HTTP error could also come from HTTP server due to HTTP server 
+    configuration error. Category: DEPENENCY_UNHANDLED_ERROR
   Missing HTTP resources: HTTP 404. (could be client side configuration error, or missing server side HTTP resources or server side application not deployed/running)
+    Category: APP_ERROR
 
 Expected errors: the erro makes sense for the business people. Use a specific error code for each case.
-  Business validation error
-  Dependency system error
-  Remote call timeout, e.g. CRM_TIMEOUT
-  Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED
-  Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP_502, CRM_HTTP_503, etc.
+  User input validation error (business validation error). Category:USER_INPUT_ERROR
+  Dependency handled error. Category: DEPENENCY_HANDLED_ERROR
+  Remote call timeout, e.g. CRM_TIMEOUT.  Category: TIMEOUT_ERROR
+  Connection error: java.net.ConnectException: Connection refused: connect. CRM_CONNECTION_REFUSED. Category: CONN_ERROR
+  SSL error: certificate issues. Category: SSL_ERROR
+  Network error: HTTP 502, 503, 504. Use erro cdoe like CRM_HTTP502, CRM_HTTP503, etc. Category: NETWORK_ERROR
 
 Assume we are calling a API named "ABC", we may use the table below to map errors.
 
@@ -31,3 +38,4 @@ HTTP status   Error             User Problem?   Dev Problem?    Operation Proble
             Timeout             N               N               Y                     ABC_TIMEOUT
             Unreachable         N               Y               Y                     ABC_CONN
             Connection refused  N               Y               Y                     ABC_CONN
+            SSL error           N               Y               N                     
