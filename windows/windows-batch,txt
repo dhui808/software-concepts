@@ -20,4 +20,11 @@ For-loop
     call another.cmd %env%
   )
   
+Check if a variable is empty
+  set env=%1
   
+  rem strip the outer set of quotes
+  set env=%~1
+  
+  if "%env%" == "" echo env is empty
+  if NOT "%env%" == "" echo env is not empty
