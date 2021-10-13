@@ -9,7 +9,7 @@ Find the string length:
 
 Find current time and convert it to seconds
   set STARTTIME=%TIME%
-  set /a STARTTIME=%STARTTIME:~0,2% * 3600 + %STARTTIME:~3,2% * 60 + %STARTTIME:~6,2%
+  set /a STARTTIME=(1%STARTTIME:~0,2%-100) * 3600 + (1%STARTTIME:~3,2%-100) * 60 + (1%STARTTIME:~6,2%-100)
   echo %STARTTIME%
 
 For-loop
