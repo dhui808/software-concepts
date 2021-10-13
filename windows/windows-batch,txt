@@ -6,3 +6,18 @@ Find the string length:
   for %%? in (length.txt) do ( set /a length=%%~z? - 2 )
   echo %length%
   del length.txt
+
+Find current time and convert it to seconds
+  set STARTTIME=%TIME%
+  set /a STARTTIME=%STARTTIME:~0,2% * 3600 + %STARTTIME:~3,2% * 60 + %STARTTIME:~6,2%
+  echo %STARTTIME%
+
+For-loop
+  set volume=%1
+  set env=%2
+  
+  for /l %%a in (1, 1, %volume%) do (
+    call another.cmd %env%
+  )
+  
+  
