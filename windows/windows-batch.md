@@ -1,6 +1,9 @@
-https://www.dostips.com/DtTipsStringManipulation.php
+### Milti-line command
+^ is the eqvivalent of UNIX \ 
 
 ### Find the string length:
+  See https://www.dostips.com/DtTipsStringManipulation.php
+  
   set var=Hello World!  
   echo %var%> length.txt  
   for %%? in (length.txt) do ( set /a length=%%~z? - 2 )  
