@@ -1,0 +1,4 @@
+Download lombok-1.18.20.jar
+java -jar lombok-1.18.20.jar
+
+follow the prompt to install in Eclipse
