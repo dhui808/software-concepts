@@ -42,7 +42,7 @@
   rem the result is 1
   
 ### Caculate the remainder from commandline
-  set x=1
-  set /a remainder=%x% * 1000 % 320 / 40
-  rem the result is 1  
+  set x=1  
+  set /a remainder=%x% * 1000 % 320 / 40  
+  rem the result is 1   
   
