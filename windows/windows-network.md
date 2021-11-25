@@ -1,3 +1,5 @@
-netsh interface ipv4 show excludedportrange protocol=tcp
-
-nslookup example.myorg.com
+## Display or modify the network configuration
+    netsh interface ipv4 show excludedportrange protocol=tcp
+    
+## Name server lookup
+    nslookup example.myorg.com
