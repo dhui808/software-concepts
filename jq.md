@@ -1,3 +1,12 @@
+## Install jq on GitBash on Windows
+    Open Git Bash as administrator
+    curl -k -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
+
+## Get Okta token
+    export TOKEN=$(curl -k -H "Authorization: Basic <base64_string>" -H "content-type: application/x-www-form-urlencoded" \
+    -H "accept: application/json" -d 'grant_type=client_credentials&scope=sys:myscope1 sys:myscope2' \
+    https://www.example.com | jq -r '.access_token')
+    
 ## Invoking jq
     curl -s "http://openlibrary.org/search.json?q=st%C4%99pniak" | jq .
 
