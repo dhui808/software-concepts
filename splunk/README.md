@@ -6,4 +6,9 @@
   
 ## search logs for entries with custId and orgId fields and list all unique custId
     namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" custId orgId | stats count by custId | table custId
-  
+    
+## search errors and display the results as a table
+    namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" STATUS="Error" OR STATUS="Failed" | table custId STATUS errorMessage _time
+Save the results as a table panel in dashboard. change the time range to default.
+
+
