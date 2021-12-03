@@ -1,3 +1,8 @@
+## Merge develop branch to main branch
+  git checkout main
+  git merge --no-ff develop
+  git push
+
 ## Create new repo openshifttest:
   git init  
   git add README.md  
@@ -25,7 +30,7 @@
   git push --force origin main 
   
 ## How to switch git branch
-git checkout branch_name
+  git checkout branch_name
 
 ## How to create new branch from the current branch and push it to remote?
   git checkout -b new_branch  
