@@ -4,3 +4,7 @@
   
 ### Using Okta token in a REST call
     curl -k https://www.example.com -H "Authorization: Bear $TOKEN" -H "accept: application/json" -H "X-XXX-Client-Id: 7658-3643-y7ergij"
+
+### Check http response status
+    #!/bin/bash
+    
