@@ -2,6 +2,8 @@
     Settings - Time & Language - Language - Preferred Languages - English (United States) 
     - Options - Keyboards Add a keboard - United States-International
    
-   ` + e -> è
-   ' + e -> é
-   ^ + e -> ê
+    ` + e -> è
+    ' + e -> é
+    ^ + e -> ê
+    ' + c -> ç
+    " + o -> ö
