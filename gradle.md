@@ -1,7 +1,8 @@
 ## To build without testing:
-Windows:
+    Windows:
     gradlew build -x test
-Linux:
+    
+    Linux:
     ./gradlew build -x test
     
 ## To ignore CheckStyle failures
