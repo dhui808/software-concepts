@@ -58,3 +58,6 @@
     git revert 29ce4c1  
     git push
  
+## How to delete a local branch?
+    git branch -d <branch_name>
+    
