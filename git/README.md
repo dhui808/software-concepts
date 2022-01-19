@@ -61,3 +61,6 @@
 ## How to delete a local branch?
     git branch -d <branch_name>
     
+## git pull does not pull the latest updates
+    git fetch origin develop
+    git reset --hard FETCH_HEAD
