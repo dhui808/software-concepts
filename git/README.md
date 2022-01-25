@@ -1,3 +1,6 @@
+## Unstage a file
+    git reset HEAD <file>
+    
 ## Merge develop branch to main branch
     git checkout main
     git merge --no-ff develop
