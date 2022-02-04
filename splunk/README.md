@@ -11,4 +11,9 @@
     namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" STATUS="Error" OR STATUS="Failed" | table custId STATUS errorMessage _time
 Save the results as a table panel in dashboard. change the time range to default.
 
-
+## Regular expression
+    namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" HEADER | rex field=_raw "ID:(?<ID>[0-9A-Za-z]{24}).*XUID:(?<XUID>[0-9a-z]{18])" | stats count ID, XUID | table ID, XUID
+    
+## Subquery - search header and finds ID and XUID in the subquery. In the main query, STATUS=success and ID XUID match the results of subquery.
+    namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" STATUS=success [search namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" HEADER | rex field=_raw "ID:(?<ID>[0-9A-Za-z]{24}).*XUID:(?<XUID>[0-9a-z]{18])" | stats count ID, XUID | table ID, XUID]
+    
