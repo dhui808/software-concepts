@@ -17,3 +17,12 @@ Save the results as a table panel in dashboard. change the time range to default
 ## Subquery - search header and finds ID and XUID in the subquery. In the main query, STATUS=success and ID XUID match the results of subquery.
     namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" STATUS=success [search namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" HEADER | rex field=_raw "ID:(?<ID>[0-9A-Za-z]{24}).*XUID:(?<XUID>[0-9a-z]{18])" | stats count ID, XUID | table ID, XUID]
     
+## Interset of two subquery
+    | set interset [subquery1] [subquery2]
+
+## diff of two subquery
+    | set diff [subquery1] [subquery2]
+
+## union of two subquery
+    | set union [subquery1] [subquery2]
+    
