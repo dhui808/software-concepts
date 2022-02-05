@@ -29,3 +29,9 @@ Save the results as a table panel in dashboard. change the time range to default
 ## First search reult
     ... | tail 1
     
+## Use the timestamp from the subsearch to specify the earliest and latest fileds for the main search
+    namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" SomeFields 
+    [search namespace="my-openshift-namepsace" sourcetype="kube:container:myproject" OtherFields | eval earliest=_time
+    | eval latest=_time+0.02 | table earliest, latest]
+    | rex field=_raw "ID:(?<ID>[0-9A-Za-z]{24}).*XUID:(?<XUID>[0-9a-z]{18])" | table ID, XUID
+    
