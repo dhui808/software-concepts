@@ -26,3 +26,6 @@ Save the results as a table panel in dashboard. change the time range to default
 ## union of two subquery
     | set union [subquery1] [subquery2]
     
+## First search reult
+    ... | tail 1
+    
