@@ -1,3 +1,4 @@
+## jq is a lightweight and flexible command-line JSON processor
 ## Install jq on GitBash on Windows
     Open Git Bash as administrator
     curl -k -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
