@@ -4,7 +4,11 @@
 ### Double-quotes vs single-quotes in -d option
     Windows: use double-quotes
     Linux: single-quotes
-  
+
+### curl command too long
+    export TOKEN=some_very_long_token
+    cur -k https://example.com -H "Authorization: Bear $TOKEN" -H "accept: application/json" -H "X-IBM-Client-Id: 7658-3643-y7ergij"
+    
 ### Using Okta token in a REST call
     curl -k https://example.com -H "Authorization: Bear $TOKEN" -H "accept: application/json" -H "X-IBM-Client-Id: 7658-3643-y7ergij"
 
