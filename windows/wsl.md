@@ -1,4 +1,4 @@
-## Windows Subsystem for Linux (WSL) - requirement for Docker
+### Windows Subsystem for Linux (WSL) - requirement for Docker
     https://docs.microsoft.com/en-us/windows/wsl/install-win10
     Enable the Windows Subsystem for Linux
       PowerShell as admin user: dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -12,3 +12,7 @@
       PowerShell as admin user: wsl --set-default-version 2
     Install your Linux distribution of choice
     Install Windows Terminal (optional)
+
+### Copy file between Windows file systems and Linux
+    From Linux terminal, cd /mnt/c
+    
