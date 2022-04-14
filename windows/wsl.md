@@ -15,4 +15,4 @@
 
 ### Copy file between Windows file systems and Linux
     From Linux terminal, cd /mnt/c
-    
+    From Windows 11 Windows Explorer, one can see Linux/Ubuntu.
