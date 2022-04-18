@@ -1,3 +1,6 @@
+## Discard changes to a local file
+    git checkout filename
+    
 ## Unstage a file
     git reset HEAD <file>
     
