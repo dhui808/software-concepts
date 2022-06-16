@@ -1,2 +1,4 @@
 settings.xml
   <server><id> needs to match <repository><id>
+
+mvn -DskipTests=true -s settings-local.xml clean install
