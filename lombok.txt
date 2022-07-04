@@ -1,7 +1,8 @@
-Download lombok-1.18.20.jar
-java -jar lombok-1.18.20.jar
+### log cannot be resolved (Eclipse)
+    Download lombok-1.18.20.jar
+    java -jar lombok-1.18.20.jar
 
-follow the prompt to install in Eclipse
+    follow the prompt to install in Eclipse
 
-Restart Eclipse
-Maven -> Update Project...
+    Restart Eclipse
+    Maven -> Update Project...
