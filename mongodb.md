@@ -34,3 +34,17 @@
     in a social media graph). The connections between elements are called links or relationships. In a graph database, 
     connections are first-class elements of the database, stored directly. In relational databases, links are implied, 
     Use cases include fraud detection, social networks, and knowledge graphs.
+
+### Performance Improvement
+    Examine query patterns
+        Analyzing your query patterns and determining where you can embed data rather than doing in-application or in-database joins.
+        Storing the results of frequent sub-queries on documents to reduce read load
+        Making sure that you have indices on any fields you regularly query against.
+    Review data modeling and indexing
+        Deciding when to embed a document or create a reference between separate documents in different collections instead
+    Try embedding and referencing
+    Increasing memory
+    Replication and sharding
+    
+    
+    
