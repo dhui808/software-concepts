@@ -3,6 +3,11 @@
     of web scale applications that handled huge amounts of data and traffic.
     
     How MongoDB is different from columns based database? If it is loading data on memory, for huge data how will you handle it?
+    
+    With column types, the data is stored by columns which can enable efficient aggregation operations / queries on a particular column.
+    With document types, the entire document is logically stored in one place and is generally retrieved as a whole (no efficient 
+    aggregation possible on "columns" / "fields").
+    
 ### Types of NoSQL DB
     Document databases
     Key-value stores
