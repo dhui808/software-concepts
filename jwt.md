@@ -7,9 +7,12 @@
     server verifies for authenticity and only then responds to the request.
     
 ### Opaque Access Tokens
-    Opaque access tokens are tokens in a proprietary format that you cannot access and typically contain some identifier 
-    to information in a server's persistent storage.  To validate an opaque token, the recipient of the token needs to 
-    call the server that issued the token.
+    The opaque token is a random unique string of characters issued by the authorization server. It is one of the possible 
+    formats that access tokens or refresh tokens can take. The opaque token does not pass any identifiable information on 
+    the user so it’s impossible for the resource server to make any authorization decisions based on the opaque token itself. 
+    The opaque contains an identifier to information stored on the authorization server. To validate the token and retrieve 
+    the information on the token and the user, the resource server calls the authorization server and requests the token 
+    introspection.
 
 ### JWT access tokens
     JSON Web Token (JWT) access tokens conform to the JWT standard and contain information about an entity in the form of 
