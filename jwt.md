@@ -18,3 +18,22 @@
     JSON Web Token (JWT) access tokens conform to the JWT standard and contain information about an entity in the form of 
     claims. They are self-contained therefore it is not necessary for the recipient to call a server to validate the token.
     
+### ID Token vs Access Token
+    auth0.com/blog/id-token-access-token-what-is-the-difference/
+    
+    ID token:
+        The user has been authenticated.
+        Spec: OpenID Connect
+        Format: JWT
+        Payload: holds identification info)
+        Usage: assume the user is suthenticated; get user profile data
+        Don't: call API; check if the user is allowed to access sth.
+        
+    Access Token
+        The app has been authorized.
+        Spec: OAuth
+        Format: any structure, including JWT
+        Payload (JWT): holds authorization info
+        Usage: call API; check if the user is allowed to access sth; inspect its content on the server side
+        Don't: inspect its content on the client side
+        
