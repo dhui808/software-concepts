@@ -2,3 +2,16 @@ settings.xml
   <server><id> needs to match <repository><id>
 
 mvn -DskipTests=true -s settings-local.xml clean install
+
+### Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+        </plugin>
+    </plugins>
