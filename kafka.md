@@ -1,3 +1,7 @@
+### Kafka
+    Kafka is a distributed messaging system providing fast, highly scalable and redundant messaging through 
+    a pub-sub model.
+    
 ### Kafka key concepts
     A partition is a totally ordered sequence of records. A record has an offset, and it may have a 
     key and a value; both are byte arrays and both are optional.
