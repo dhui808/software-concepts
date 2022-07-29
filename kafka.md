@@ -45,7 +45,7 @@
     Each consumer within the group reads from a unique partition and the group as a whole consumes all 
     messages from the entire topic.
     
-### At most once message delivery vs At least once message delivery
+### At most once delivery vs At least once delivery vs Exactly once delivery
     For at most once message delivery, the consumer reads data from a partition, commits the offset 
     that it has read, and then processes the message. If the consumer crashes between committing the 
     offset and processing the message it will restart from the next offset without ever having 
@@ -56,3 +56,10 @@
     crash between processing the message and committing the offset and when the consumer restarts 
     it will process the message again. This leads to duplicate messages in downstream systems but 
     no data loss.
+
+    Exactly once delivery is guaranteed by having the consumer process a message and commit the output 
+    of the message along with the offset to a transactional system. If the consumer crashes it 
+    can re-read the last transaction committed and resume processing from there. This leads to no 
+    data loss and no data duplication. In practice however, exactly once delivery implies significantly 
+    decreasing the throughput of the system as each message and offset is committed as a transaction.
+    
