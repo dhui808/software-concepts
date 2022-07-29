@@ -42,3 +42,7 @@
     Consumers across groups are entirely isolated. A topic may be read at a different cadence by any 
     number of consumer groups — each with their individual partition assignments and offsets.
     
+    Each consumer within the group reads from a unique partition and the group as a whole consumes all 
+    messages from the entire topic.
+    
+    
