@@ -45,4 +45,14 @@
     Each consumer within the group reads from a unique partition and the group as a whole consumes all 
     messages from the entire topic.
     
+### At most once message delivery vs At least once message delivery
+    For at most once message delivery, the consumer reads data from a partition, commits the offset 
+    that it has read, and then processes the message. If the consumer crashes between committing the 
+    offset and processing the message it will restart from the next offset without ever having 
+    processed the message. This would lead to potentially undesirable message loss.
     
+    For at least once delivery, the consumer reads data from a partition, processes the message, 
+    and then commits the offset of the message it has processed. In this case, the consumer could 
+    crash between processing the message and committing the offset and when the consumer restarts 
+    it will process the message again. This leads to duplicate messages in downstream systems but 
+    no data loss.
