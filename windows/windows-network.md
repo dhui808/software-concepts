@@ -11,6 +11,6 @@
     (admin user)
     netstat -ab
     
-### Check AD groups 
+### Check AD groups and Password Expiry Date
     net user <id> /domain
     
