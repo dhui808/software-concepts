@@ -6,7 +6,11 @@
 
 ### List of user groups
     net localgroup
+    
 ### Check all port in use
     (admin user)
     netstat -ab
+    
+### Check AD groups 
+    net user <id> /domain
     
