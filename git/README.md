@@ -74,3 +74,6 @@
 ### git [ERROR] Invalid syntax in configuration ini file
     Try commiting with the -n (--no-verify) flags
     
+### fatal: unable to access 'https://github.com/myid/myrepo/': SSL certificate problem: self signed certificate in certificate chain
+    Intermittent. Go to the parent folder. git pull works without the above error
+    
