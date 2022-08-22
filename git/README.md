@@ -77,3 +77,5 @@
 ### fatal: unable to access 'https://github.com/myid/myrepo/': SSL certificate problem: self signed certificate in certificate chain
     Intermittent. Go to the parent folder. git pull works without the above error
     
+### find all files user modified since 4 months ago:
+    git log --since="4 months ago" --name-only --author="user002" --pretty=format: | sort | uniq
