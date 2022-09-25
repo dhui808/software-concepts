@@ -50,8 +50,7 @@
     git reset HEAD~  
 
 ### To discard local changes to all files, permanently: 
-    git reset --hard
-    git clean -dxf
+    git restore *
     
 ### How to revert a merge commit that's already pushed to remote branch?
     git reset --hard <commit-hash-prior-to-merge>  
