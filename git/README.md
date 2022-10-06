@@ -1,3 +1,8 @@
+### Create stash
+    git stash save -u <stash_name>
+### Apply and delete stash
+    git stash pop
+    
 ### Discard changes to a local file
     git checkout filename
     
