@@ -1,3 +1,8 @@
+### Git ini file path
+    git config --list --show-origin
+### [ERROR] Invalid syntax in configuration ini file.
+    delete ./git/hooks/pre-commit
+    not a good solution. how to config it as a global option?
 ### Create stash
     git stash save -u <stash_name>
 ### Apply and delete stash
