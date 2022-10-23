@@ -1,8 +1,10 @@
 ### Git ini file path
     git config --list --show-origin
 ### [ERROR] Invalid syntax in configuration ini file.
-    delete ./git/hooks/pre-commit
-    not a good solution. how to config it as a global option?
+    git config --global core.hooksPath $HOME
+    (.gitconfig file is created/updated in $HOME folder)
+    or
+    From SourceTree, select Commit Options - Bypass commit hooks
 ### Create stash
     git stash save -u <stash_name>
 ### Apply and delete stash
