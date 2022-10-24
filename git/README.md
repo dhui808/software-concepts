@@ -61,6 +61,9 @@
 ### How to undo the latest commit?
     git reset HEAD~  
 
+### Roll back the most recent merge (not pushed)
+    git reset --hard <commit_before_merge>
+    
 ### To discard local changes to all files, permanently: 
     git restore *
     
