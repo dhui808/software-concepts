@@ -36,3 +36,7 @@
 
 ## Mock private field
     ReflectionTestUtils.setField(underTestObject, "person", mockedPerson);
+
+### Mock protected method
+    doReturn(mockProfile).when(BaseService)service).getCustProfile("profile123");
+    
