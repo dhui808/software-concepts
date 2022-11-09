@@ -83,3 +83,16 @@
     2021-01-26 11:33:17.708 ERROR 2296 --- [x-BookService-1] c.n.h.c.javanica.command.GenericCommand  : failed to processed fallback 
     is the method: 'reliable'. 
     java.lang.RuntimeException: reliable throws exception.
+
+### When to use Circuit Breaker vs Retry
+    Retry:
+        Spring ResourceAccessException with underlying SocketTimeoutException
+        HTTP 504 Gateway timeout
+    
+    Circuit Breaker:
+        HTTP 503 Service unavailable
+        HTTP 404 Not found
+        Long-lasting timeout
+            Spring ResourceAccessException with underlying exception other than SocketTimeoutException (SSL exception, for example)
+            HTTP 504 Gateway timeout
+            
