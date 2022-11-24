@@ -15,7 +15,7 @@
         private CircuitBreakerRegistry registry;
         @GetMapping("/disable/{cb-service-name}")
         public String getTenantById(@PathVariable("cb-service-name") String cbServiceName) {
-            registry.circuitBreaker(name).transitionToDisabledState();
+            registry.circuitBreaker(cbServiceName).transitionToDisabledState();
             return cbServiceName + " is disabled.";
         }
     }
