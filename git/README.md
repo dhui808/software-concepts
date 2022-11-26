@@ -13,6 +13,12 @@
 ### Discard changes to a local file
     git checkout filename
     
+    For all unstaged files in current working directory use (not verified yet)
+    git restore .
+
+    another option
+    git stash save --keep-index --include-untracked
+    
 ### Unstage a file
     git reset HEAD <file>
     
