@@ -6,3 +6,9 @@
 
     Restart Eclipse
     Maven -> Update Project...
+
+### Generate constructors
+    Use @Data at the class
+    Use @NonNull at each field to be used in the constructor
+    (or each such field is final)
+    
