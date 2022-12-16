@@ -9,6 +9,6 @@
 
 ### Generate constructors
     Use @Data at the class
-    Use @NonNull at each field to be used in the constructor
+    Use @NonNull at each field to be used in the constructor (even for primitives! completely nonsense.)
     (or each such field is final)
     
