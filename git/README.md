@@ -33,6 +33,7 @@
     git commit -m "first commit"  
     git branch -m main  
     git remote add origin https://github.com/dhui808/openshifttest.git  
+    (create openshifttest on github.com)
     git push -u origin main  
 
 ### How to clean all commit history?
