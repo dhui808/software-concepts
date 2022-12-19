@@ -3,4 +3,20 @@
 	In Devices settings, select Send or receive files via Bluetooth.  
 	In Bluetooth File Transfer, select Receive files  
 	From the mobile, select the file (image) > Share > Share via > Bluetooth > Select the computer to send file to  
-  
+
+### Pair two Windows PC
+	Start  > Settings  > Bluetooth & devices , and then turn on Bluetooth 
+	> Devices > Add device > Bluetooth
+	Select the other Windows PC from the discovered Bluetooth devices
+	Connect
+	From the other Windows PC, click yes.
+	From the first Windows PC, click Done.
+	
+### Send files over Bluetooth in Windows
+	Pair the two Windows PC.
+	Start > Settings > Bluetooth & devices > Device
+	> Send or receive files via Bluetooth (This may not be allowed in organization devices.)
+	> choose the device you want to share to > Next
+	Select Browse > the file or files to share > Open > Next (which sends it) > Finish.
+	On the receiving device, have your friend accept the file.
+	
