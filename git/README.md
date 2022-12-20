@@ -21,6 +21,9 @@
     
 ### Unstage a file
     git reset HEAD <file>
+
+### Delete a local file and stage it
+    git rm <file>
     
 ### Merge develop branch to main branch
     git checkout main
