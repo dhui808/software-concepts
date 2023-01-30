@@ -1,11 +1,23 @@
-### Roll back commits down towards a last known good commit - enterprise approach
+### Roll back commits down towards a last known good commit - no merge
     Create a feature branch from main branch
     Check out the feature branch.
     git log
     Find the last_good_commit_id and the latest_commit_id
     git revert --no-edit last_good_commit_id..latest_commit_id
     git push -f
-
+    Merge feature branch into main branch
+    
+### Roll back commits down towards a last known good commit - with merges
+    Create a feature branch from main branch
+    Check out the feature branch.
+    git log
+    Find the last_good_commit_id and the latest_commit_id
+    git reset --hard last_good_commit_id
+    git reset --soft latest_commit_id
+    git commit -m "Some message."
+    git push
+    Merge feature branch into main branch
+    
 ### Git ini file path
     git config --list --show-origin
 ### [ERROR] Invalid syntax in configuration ini file.
