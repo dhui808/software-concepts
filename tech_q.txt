@@ -1,0 +1,94 @@
+1.        What is Dependency Injection, and how you can use it?
+2.        What is the use @Configuration annotation in Spring?
+3.        How MongoDB is different from columns based database? If it is loading data on memory, for huge data how will you handle it?
+4.        How do we inject beans in the application?
+5.        How will you deploy your spring boot application?
+6.        How do you maintain logs of your application, if you have to check later?
+7.        Difference between @Component and @Service annotation.
+8.        Difference between @Controller and @RestController
+9.        Explain challenges you face while development.
+10.        Did you use annotation controller advice to handle exception.
+11.        What is bean scope and types of it? Is Singleton thread safe or not?
+12.        Difference between setter and constructor injection.
+13.        Why String is immutable?
+14.        What is profile in Spring Boot and what is use of @ConfigurationProperties?
+15.        What is difference between StringBuilder and StringBuffer?
+16.        What's the difference between using a string literal, e.g. "Zoo", and using a String constructor, e.g. new String("Zoo")?
+17.        How does Spring MVC work?
+18.        How dispatcher servlet finds the correct controller for a particular request?
+19.        Difference between @Controller and @RestController?
+20.        What are different scopes of a bean? Which is the default one?
+21.        Is Singleton bean thread safe ? Is Prototype bean thread safe?
+22.        Please explain what is fail-fast and fail-safe iterators in Java? Give Example.
+23.        Explain the microservice you worked on? On which environment?
+24.        Who takes care of the DevOps in your project?
+25.        What is Kafka? How is it better than the JMS MQ?
+26.        What are differences spring and spring framework?
+27.        Can you explain the Spring Dependency injection?
+28.        What are the different ways to inject the beans for Dependency Injections?
+29.        Explain component
+30.        Difference between controller and REST controller
+31.        Did you use annotation Controller advice annotation to catch different exception
+32.        Explain challenges in your development issues?
+33.        Spring Scopes ?
+34.        what is the default scope for beans. - Singleton
+35.        have you had any experiences with Microservices
+36.        Can you describe the MS design and framework, how the flow works and functionally and how do handle authentication.
+37.        Any distributed cache
+38.        What are the 2 types of exceptions in Java? What are the differences between the 2?
+39.        What are the data types supported by Java?
+40.        How does a HashMap work in Java?
+41.        What does the "static" keyword mean? Can you override private or static method in Java?
+42.        What are the basic interfaces of Java Collections Framework?
+43.        What's the difference between StringBuffer and StringBuilder? -
+44.        What's the difference between using a string literal, e.g. "Zoo", and using a String constructor, e.g. new String("Zoo")?
+45.        Please explain what fail-fast and fail-safe iterators provided in Java and provide some examples.
+46.        What is your experience in Spring / Spring Boot? Provide examples of past projects.
+47.        describe how to implement the Singleton design pattern.
+48.        Functional Interface
+49.        Stream API
+50.        Spring Security works
+51.        Where did you use your Spring Security
+52.        OAuth Token ?
+53.        How did you manage Exceptional Handling in your application
+54.        In Spring - handle these exceptions
+55.        Concept of interface and abstract class. From a design perspective – how would you choose which to use? What about in the case of a contract for the class?
+56.        Is it possible to have a static final class in java?
+57.        What does SOLID design principle stand for?
+58.        How can we inject beans in spring – Not sure exactly what he was going for, I talked about Auto wiring, defining beans in xml and through annotation
+59.        What is the Scope of a Spring bean?
+60.        What are the 5 scopes of a Spring bean, and how does that affect their lifecycle?
+61.        Is a bean with the singleton scope thread safe?
+62.        What does the life cycle of a Spring bean look like – specifically how does Spring instantiate a bean under the covers?
+63.        What are the 2 types of exceptions in Java? What are the differences between the 2?
+64.        What are the data types supported by Java?
+65.        How does a HashMap work in Java?
+66.        What does the "static" keyword mean? Can you override private or static method in Java?
+67.        What are the basic interfaces of Java Collections Framework?
+68.        What's the difference between StringBuffer and StringBuilder? -
+69.        What's the difference between using a string literal, e.g. "Zoo", and using a String constructor, e.g. new String("Zoo")?
+70.        Please explain what fail-fast and fail-safe iterators provided in Java and provide some examples.
+71.        What is your experience in Spring / Spring Boot? Provide examples of past projects
+72.        Concept of interface and abstract class. From a design perspective – how would you choose which to use? What about in the case of a contract for the class?
+73.        Is it possible to have a static final class in java?
+74.        What does SOLID design principle stand for?
+75.        How can we inject beans in spring – Not sure exactly what he was going for, I talked about Auto wiring, defining beans in xml and through annotation
+76.        What is the Scope of a Spring bean?
+77.        What are the 5 scopes of a Spring bean, and how does that affect their lifecycle?
+78.        Is a bean with the singleton scope thread safe?
+79.        What does the life cycle of a Spring bean look like – specifically how does Spring instantiate a bean under the covers?
+80.        Gang of 4 design patterns
+81.        If you have a train, with multiple emergency brake levers throughout the train, what is the most appropriate gang of 4 design pattern to represent a solution for this?
+82.        Identify the first unique word of a book.
+83.        What are differences spring and spring framework?
+84.        Can you explain the Spring Dependency injection?
+85.        What are the different ways to inject the beans for Dependency Injections?
+86.        Explain component
+87.        Difference between controller and REST controller
+88.        Did you use annotation Controller advice annotation to catch different exception
+89.        Explain challenges in your development issues?
+90.        Spring Scopes ?
+91.        what is the default scope for beans. - Singleton
+92.        have you had any experiences with Microservices
+93.        Can you describe the MS design and framework, how the flow works and functionally and how do handle authentication.
+94.        Any distributed cache
