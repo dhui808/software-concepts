@@ -14,3 +14,5 @@
 ### Check AD groups and Password Expiry Date
     net user <id> /domain
     
+### Check which app is running at which port - Resource Monitor
+    resmon
