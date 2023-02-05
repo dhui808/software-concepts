@@ -4,6 +4,14 @@
 ### Get with parameters - quotes needed
     curl -X GET 'http://localhost:5000/locations?id=myid&src=abc'
     
+    When using the curl command with multiple parameters, single quotes are needed to preserve the integrity of the parameters 
+    as a single unit. Without the single quotes, the shell may interpret some characters, such as & or $, as special characters
+    and modify their intended value.
+
+    For example, if you have a URL that contains the & character, the shell would interpret it as the background operator, 
+    breaking the command into separate commands, leading to incorrect results. By enclosing the URL within single quotes, you 
+    can ensure that it is passed as a single argument to the curl command.
+
 ### Double-quotes vs single-quotes in -d option
     Windows: use double-quotes
     Linux: single-quotes
