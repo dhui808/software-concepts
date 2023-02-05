@@ -1,7 +1,7 @@
 ### Display response header
     curl -v
     
-### Get with parameters - no quotes needed
+### Get with parameters - quotes needed
     curl -X GET 'http://localhost:5000/locations?id=myid&src=abc'
     
 ### Double-quotes vs single-quotes in -d option
