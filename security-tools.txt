@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=clHMz_Vs5WE
+
+1. Autoruns - 0:23
+2. Process Explorer - 3:38
+3. PeStudio - 5:05
+4. HxD - 6:00
+5. Comodo Free Firewall - 7:11
+6. Bitdefender and Kaspersky - 9:11
+7. Bitwarden - 10:17
