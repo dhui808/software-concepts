@@ -1,4 +1,4 @@
-Recall or replace an email message that you sent: If you and your recipients are all on Microsoft Exchange or 
+aRecall or replace an email message that you sent: If you and your recipients are all on Microsoft Exchange or 
 Microsoft 365 and in the same organization.
 
 Select the Sent Items folder.
@@ -9,9 +9,9 @@ Select File > Info.
 
 Select Message Resend and Recall > Recall This Message..., and select one of the two options.
 
-Select Delete unread copies of this message to recall the sent message.
+  Select Recall This Message...
 
-Select Delete unread copies and replace with a new message to replace the sent message with a new message.
+  Select Resend This Message...
 
 Select the Tell me if recall succeeds or fails for each recipient check box.
 
