@@ -1,4 +1,4 @@
-aRecall or replace an email message that you sent: If you and your recipients are all on Microsoft Exchange or 
+Recall or replace an email message that you sent: If you and your recipients are all on Microsoft Exchange or 
 Microsoft 365 and in the same organization.
 
 Select the Sent Items folder.
