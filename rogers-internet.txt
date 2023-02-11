@@ -1,0 +1,5 @@
+Use the original Network Name and password on the gatewat (Modem) to connect to Internet
+
+Later http://10.0.0.1/captiveportal.jst pops up in the Chrome.
+Set Wi-Fi name and password
+Connect to the new Wi-Fi name (as Network Name)
