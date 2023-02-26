@@ -1,3 +1,7 @@
+### Rename master branch to main
+    git branch -m master main
+    git push -f origin main
+    
 ### Roll back commits down towards a last known good commit - no merge
     Create a feature branch from main branch
     Check out the feature branch.
