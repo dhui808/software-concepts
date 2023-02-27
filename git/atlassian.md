@@ -2,3 +2,10 @@
     Delete the password file from C:\Users\username\AppData\Local\Atlassian\SourceTree
     Note: SourceTree login problem happens when yor enterprise password is changed.
     
+### Create a new Atlassian account and associate it with Sourtree
+    Delete the password file from C:\Users\username\AppData\Local\Atlassian\SourceTree
+    Delete the account.json file from C:\Users\username\AppData\Roaming\Atlassian\SourceTree
+    Re-open Sourcetree.
+    Select Bitbucket
+    Enter a username for your Atlassian account.
+    
