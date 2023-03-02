@@ -1,6 +1,12 @@
 ### Kafka
     Kafka is a distributed messaging system providing fast, highly scalable and redundant messaging through 
     a pub-sub model.
+ 
+### Kafka vs IBM MQ
+    A scenario where Kafka should be used instead of IBM MQ is when you need to handle large volumes of  
+    real-time data streams with low latency, and where data loss is acceptable (since Kafka does not provide 
+    guaranteed message delivery). Conversely, if you need to ensure reliable and secure message delivery 
+    between applications and systems, and you cannot afford to lose messages, IBM MQ is the better choice.
     
 ### Kafka key concepts
     A partition is a totally ordered sequence of records. A record has an offset, and it may have a 
