@@ -4,6 +4,8 @@
  
     Kafka is more of a publish/subscribe product, though it is still possible to use it as a queue.
     
+    Kafka does not use a queue underneath, but a log, an order sequence of elements.
+    
     Kafka stores every message on disk, as log.
     
     When Kafka removes messages, it always happens in batches, and it's completely detached from consumers 
