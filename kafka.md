@@ -68,4 +68,8 @@
     can re-read the last transaction committed and resume processing from there. This leads to no 
     data loss and no data duplication. In practice however, exactly once delivery implies significantly 
     decreasing the throughput of the system as each message and offset is committed as a transaction.
+ 
+ ### Message Broker Patterns
+    pub-sub: no assumptions are made about the number and activity of consumers.
+    message queue: Recipient of the message is clearly defined is expected to process it only once.
     
