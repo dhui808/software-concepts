@@ -4,6 +4,12 @@
  
     Kafka is more of a publish/subscribe product, though it is still possible to use it as a queue.
     
+    Kafka stores every message on disk, as log.
+    
+    When Kafka removes messages, it always happens in batches, and it's completely detached from consumers 
+    activity. Instead of checking which message has been consumed, Kafka keeps track of where in the log the 
+    consumer is, and it has no impact on message retention
+    
 ### Kafka vs IBM MQ
     A scenario where Kafka should be used instead of IBM MQ is when you need to handle large volumes of  
     real-time data streams with low latency, and where data loss is acceptable (since Kafka does not provide 
