@@ -1,3 +1,9 @@
+### Show differences between two commits for a specific file
+    git diff oldCommit..newCommit file
+    
+### compare two different files in two different revisions, like this:
+    git diff <revision_1>:<file_1> <revision_2>:<file_2>
+
 ### Rename master branch to main
     git branch -m master main
     git push -f origin main
