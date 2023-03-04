@@ -2,6 +2,8 @@
     Kafka is a distributed messaging system providing fast, highly scalable and redundant messaging through 
     a pub-sub model.
  
+    Kafka is more of a publish/subscribe product, though it is still possible to use it as a queue.
+    
 ### Kafka vs IBM MQ
     A scenario where Kafka should be used instead of IBM MQ is when you need to handle large volumes of  
     real-time data streams with low latency, and where data loss is acceptable (since Kafka does not provide 
