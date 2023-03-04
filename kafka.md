@@ -11,6 +11,12 @@
     When Kafka removes messages, it always happens in batches, and it's completely detached from consumers 
     activity. Instead of checking which message has been consumed, Kafka keeps track of where in the log the 
     consumer is, and it has no impact on message retention
+### ZooKeeper snd Kafka Broker
+    ZooKeeper is a coordination service. indispensable in high‑availability distributed systems. 
+    consensus between the servers.
+    
+    A broker is a server that manages topics, messages persistence and lifetime, and to which producers and 
+    consumers connect.
     
 ### Kafka vs IBM MQ
     A scenario where Kafka should be used instead of IBM MQ is when you need to handle large volumes of  
