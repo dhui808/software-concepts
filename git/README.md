@@ -43,7 +43,7 @@
 ### Discard changes to a local file
     git checkout filename
     
-    For all unstaged files in current working directory use (not verified yet)
+    For all unstaged files in current working directory use
     git restore .
 
     another option
