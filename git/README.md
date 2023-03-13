@@ -1,3 +1,6 @@
+### How to check Git username and password
+    git config --list
+    
 ### Show differences between two commits for a specific file
     git diff oldCommit..newCommit file
     
