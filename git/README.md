@@ -10,6 +10,17 @@
 ### compare two different files in two different revisions, like this:
     git diff <revision_1>:<file_1> <revision_2>:<file_2>
 
+### Delete branch locally and remotely
+    Delete branch locally
+    git branch -d <branch_name>
+    git branch -D <branch_name>
+
+    The -d option is an alias for --delete
+    The -D option is an alias for --delete --force
+    
+    Delete branch remotely
+    git push -d origin <branchname>
+    
 ### Rename master branch to main
     git branch -m master main
     git push -f origin main
