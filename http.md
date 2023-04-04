@@ -1,3 +1,11 @@
+### POST, PUT, PATCH
+    POST sends data to the server, not idempotent, may have additional effects. 
+        Request has body. Successful response has body. Allowed in HTML forms
+    PUT creates a new resource or replaces a resource, always idempotent, no side effect. 
+        Request has body. Successful response may have body. Not allowed in HTML forms
+    PATCH updates a resource,  not necessarily idempotent, although it can be, may have side-effects on other resources.
+        Request has body. Successful response may have body. Not allowed in HTML forms
+
 ###  Java Servlet Session tracking techniques:
 
     Cookies
