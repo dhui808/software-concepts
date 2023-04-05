@@ -6,6 +6,12 @@
     PATCH updates a resource,  not necessarily idempotent, although it can be, may have side-effects on other resources.
         Request has body. Successful response may have body. Not allowed in HTML forms
 
+    The latest Internet Standard (https://www.rfc-editor.org/rfc/rfc9110.html) does not have PATCH method:
+    The POST method requests that the target resource process the representation enclosed in the request according to 
+    the resource's own specific semantics.
+    The PUT method requests that the state of the target resource be created or replaced with the state defined by the 
+    representation enclosed in the request message content.
+    
 ###  Java Servlet Session tracking techniques:
 
     Cookies
