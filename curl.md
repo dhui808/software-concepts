@@ -66,3 +66,19 @@
         
         export_custId $i
     done
+
+### POST example - Windows
+    curl "https://dev.example.com/sendmessage" ^
+    -H "Accept: application/json, text/plain, */*" ^  
+    -H "Accept-Language: en-US,en;q=0.9" ^  
+    -H "Connection: keep-alive" ^  
+    -H "Content-Type: application/json" ^  
+    -H "Cookie: JSESSIONID=soemt948-fjeif894983r;" ^  
+    -H "Origin: https://dev.example.com" ^  
+    -H "TXN-ID: 4756-3yry-3r83y-3r8y-248r" ^  
+    -H "Referer:: https://dev.example.com" ^  
+    -H "TXM-ID: 4756-3yry-3r83y-3r8y-248r" ^  
+    -H "User-Agent: Chrome" ^  
+    -H "fei-token: 4756-3yry-3r83y-3r8y-248r" ^  
+    -d @sendmessage.json 
+    
