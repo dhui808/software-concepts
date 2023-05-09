@@ -1,5 +1,3 @@
-Business logic error (programming logic error): No error code. Normal response is returned to the client side.
-
 Unexpected errors: they should not happen but they happen
   Application Runtime error: the application internal error that happens in runtime in the application we are responsible for. Category:APP_ERROR
     Examples: ArrayIndexOutOfBoundsException, NullPointerException, IllegalArgumentException, IOException (it is not a RuntimeException)
@@ -51,3 +49,26 @@ HTTP status   Error             User Problem?   Dev Problem?    Operation Proble
             Unreachable         N               Y               Y                     ABC_CONN
             Connection refused  N               Y               Y                     ABC_CONN
             SSL error           N               Y               N                     
+
+Further thought
+
+We have to think about how JVM and third-party libraries throw/handle exceptions
+
+Java checked exception (File not found, no file write permission, parser error) should be considered as a type
+of expected system exceptions (because we know they could happen). Can optionally assign an "internal error code",
+which is mapped to a generic error code when returned to the client.
+
+Java runtime exception (e.g. nullpointerexception) is a unexpected exception (they should not happen) and s
+hould always be assigned a generic error code. This could be a programming error, or a data error coming from 
+another system.
+
+Third-party runtime exceptions caused by java checked exceptions (e.g. Spring resourceexception) should be 
+considered as a type of expected system exceptions (because we know they could happen). Can optionally assign 
+an "internal error code", which is mapped to a generic error code when returned to the client.
+
+Third-party runtime exceptions caused by java runtime exceptions is a unexpected exception (they should not 
+happen) and should always be assigned a generic error code.
+
+Summary:
+generic error code 1: unexpected exceptions, without internal error code (not worth assigning an error code)
+generic error code 2: expected system exceptions, optionally assigned an internal error code.
