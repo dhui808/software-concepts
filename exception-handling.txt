@@ -69,6 +69,14 @@ an "internal error code", which is mapped to a generic error code when returned 
 Third-party runtime exceptions caused by java runtime exceptions is a unexpected exception (they should not 
 happen) and should always be assigned a generic error code.
 
+Technical validation exceptions: application exceptions. Can optionally assign an "internal error code",
+which is mapped to a generic error code when returned to the client.
+
+Business validation errors: User errors. Assign a unique error code.
+
+Downstream errors:should fall into one of the above categories. Responses to the client needs to indicate that 
+this is a downstream error.
+
 Summary:
 generic error code 1: unexpected exceptions, without internal error code (not worth assigning an error code)
-generic error code 2: expected system exceptions, optionally assigned an internal error code.
+generic error code 2: expected system/application exceptions, optionally assigned an internal error code.
