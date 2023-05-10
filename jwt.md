@@ -41,4 +41,4 @@
     https://github.com/auth0/node-jsonwebtoken
     https://github.com/auth0/java-jwt
     https://github.com/auth0/jwks-rsa-java
-    
+    https://docs.pingidentity.com/r/en-us/pingdirectory-82/tnc1608139237101?tocId=ASdxu9LVo5PV9~siPrB2aw
