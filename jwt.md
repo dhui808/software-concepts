@@ -42,3 +42,21 @@
     https://github.com/auth0/java-jwt
     https://github.com/auth0/jwks-rsa-java
     https://docs.pingidentity.com/r/en-us/pingdirectory-82/tnc1608139237101?tocId=ASdxu9LVo5PV9~siPrB2aw
+    https://connect2id.com/products/nimbus-jose-jwt/examples/jwt-with-eddsa
+    
+    ChatGPT answer:
+        const jwt = require('jsonwebtoken');
+
+        const publicKey = 'your-public-key'; // retrieve the public key from a trusted source
+        const token = req.headers.authorization.split(' ')[1]; // extract the JWT token from the Authorization header
+
+        jwt.verify(token, publicKey, (err, decoded) => {
+          if (err) {
+            // the signature is not valid
+            res.status(401).json({ error: 'Unauthorized' });
+          } else {
+            // the signature is valid
+            req.user = decoded; // set the decoded payload as the user object in the request
+            next();
+          }
+        });
