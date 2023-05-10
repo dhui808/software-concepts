@@ -39,4 +39,6 @@
         
 ### Verify jwt token
     https://github.com/auth0/node-jsonwebtoken
+    https://github.com/auth0/java-jwt
+    https://github.com/auth0/jwks-rsa-java
     
