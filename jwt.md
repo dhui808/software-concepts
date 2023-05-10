@@ -37,3 +37,6 @@
         Usage: call API; check if the user is allowed to access sth; inspect its content on the server side
         Don't: inspect its content on the client side
         
+### Verify jwt token
+    https://github.com/auth0/node-jsonwebtoken
+    
