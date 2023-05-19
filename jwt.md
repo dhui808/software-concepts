@@ -38,6 +38,7 @@
         Don't: inspect its content on the client side
         
 ### Verify jwt token
+[Get Google OAuth access token from postman](https://github.com/dhui808/software-concepts/blob/main/postman.md)
     https://github.com/auth0/node-jsonwebtoken
     https://github.com/auth0/java-jwt
     https://github.com/auth0/jwks-rsa-java
