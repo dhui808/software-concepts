@@ -15,3 +15,46 @@ mvn -DskipTests=true -s settings-local.xml clean install
             <version>3.3.1</version>
         </plugin>
     </plugins>
+
+### Execute multi-module applications
+    <build>
+      <plugins>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.1.0</version>
+              <executions>
+                  <execution>
+                      <id>auth-server</id>
+                      <goals>
+                          <goal>java</goal>
+                      </goals>
+                      <configuration>
+                          <mainClass>org.springframework.security.oauth.samples.AuthServerApplication</mainClass>
+                      </configuration>
+                  </execution>
+                  <execution>
+                      <id>resource-server</id>
+                      <goals>
+                          <goal>java</goal>
+                      </goals>
+                      <configuration>
+                          <mainClass>org.springframework.security.oauth.samples.ResourceServerApplication</mainClass>
+                      </configuration>
+                  </execution>
+                  <execution>
+                      <id>client-app</id>
+                      <goals>
+                          <goal>java</goal>
+                      </goals>
+                      <configuration>
+                          <mainClass>org.springframework.security.oauth.samples.OAuthClientApplication</mainClass>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+    </build>
+  
+    mvn exec:java@auth-server -pl auth-server
+  
