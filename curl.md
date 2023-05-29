@@ -14,7 +14,7 @@
 
 ### Double-quotes vs single-quotes in -d option
     Windows: use double-quotes
-    Linux: single-quotes
+    Linux: single-quotes. But if need to evaluate expression like $ACCESS_TOKEN then use double quote
 
 ### curl command too long
     export TOKEN=some_very_long_token
