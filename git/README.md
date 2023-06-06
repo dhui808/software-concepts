@@ -1,3 +1,6 @@
+### Clone a specific branch
+    git clone -b branch_name repo_url
+    
 ### How to check Git username and password
     git config --list
 ### To set your Git global username/email configuration:
