@@ -1,3 +1,10 @@
+### Access current environment variable values in the Pre-request and Tests code.
+    pm.environment.get("variable_key");
+
+### Setting environment variables from scripts
+    The Pre-request and Tests scripts can update environment variable values.
+    pm.environment.set("variable_key", "variable_value");
+    
 ### Set global environment variables with test scripts
     Tests scripts execute after the response is received.
     Test scripts are JavaScript
