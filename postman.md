@@ -1,6 +1,13 @@
 ### Access current environment variable values in the Pre-request and Tests code.
     pm.environment.get("variable_key");
 
+### Select and set environment from scripts
+    // Get the environment ID
+    const environmentId = pm.environment.get("environment_id");
+    
+    // Set the environment using the ID
+    pm.environment.set("id", environmentId);
+
 ### Setting environment variables from scripts
     The Pre-request and Tests scripts can update environment variable values.
     pm.environment.set("variable_key", "variable_value");
