@@ -80,3 +80,18 @@ this is a downstream error.
 Summary:
 generic error code 1: unexpected exceptions, without internal error code (not worth assigning an error code)
 generic error code 2: expected system/application exceptions, optionally assigned an internal error code.
+
+Further thoughts
+  Validation errors: users need to take actions
+  Operational errors: support team need to take action
+    Timeout
+    Cert expired
+  Programming errors: programmers need to take actions
+    coding errors and configuration errors. 
+    could be caused by unexpected runtime exception like NPE. 
+    could be also caused by cheked exceptions.
+
+  Data issues: 
+    could be an operational error, e.g. a batch did not run
+    could be also a progamming error in the batch scripts.
+    In non-prod systems, this could be data provisioning error.
