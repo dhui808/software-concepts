@@ -91,6 +91,11 @@ Further thoughts
     could be caused by unexpected runtime exception like NPE. 
     could be also caused by cheked exceptions.
 
+Oracle recommendation:
+Here's the bottom line guideline: If a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot do anything to recover from the exception, make it an unchecked exception.
+
+Programmers' thoughts
+
   Data issues: 
     could be an operational error, e.g. a batch did not run
     could be also a progamming error in the batch scripts.
