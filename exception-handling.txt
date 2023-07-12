@@ -94,7 +94,9 @@ Further thoughts
 Oracle recommendation:
 Here's the bottom line guideline: If a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot do anything to recover from the exception, make it an unchecked exception.
 
-Programmers' thoughts
+Programmers' thoughts:
+Recoverable does not mean that the application can do something to resolve the cause of the exception, though there may be cases where this is possible.
+
 
   Data issues: 
     could be an operational error, e.g. a batch did not run
