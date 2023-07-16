@@ -26,3 +26,10 @@
     504: Gateway Timeout 
     404: Not found
     
+### Set-cookie and Cookie
+    == Server -> User Agent ==
+    Set-Cookie: SID=31d4d96e407aad42; Path=/; Secure; HttpOnly
+    Set-Cookie: lang=en-US; Path=/; Domain=example.com
+    == User Agent -> Server ==
+    Cookie: SID=31d4d96e407aad42; lang=en-US
+    
