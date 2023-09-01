@@ -48,3 +48,9 @@
         Client Authentication: "Send as Basic Auth header"
         Get New Access Token
         
+### Add cookie
+    const jar = pm.cookie.jar();
+    jar.set("localhost", "my_guid", pm.environment.get("myid"));
+    //whitelist localhost in Postman Cookie panel
+    
+    
