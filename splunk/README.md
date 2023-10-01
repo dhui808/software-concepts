@@ -35,3 +35,9 @@ Save the results as a table panel in dashboard. change the time range to default
     | eval latest=_time+0.02 | table earliest, latest]
     | rex field=_raw "ID:(?<ID>[0-9A-Za-z]{24}).*XUID:(?<XUID>[0-9a-z]{18])" | table ID, XUID
     
+### Create Splunk Alert
+   Create a search.
+   Save As - Alert
+   In Add Actions dropdown, select Send email or Send to mobile
+   Enter the necessary information
+   
