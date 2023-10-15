@@ -102,3 +102,13 @@ Recoverable does not mean that the application can do something to resolve the c
     could be an operational error, e.g. a batch did not run
     could be also a progamming error in the batch scripts.
     In non-prod systems, this could be data provisioning error.
+
+2013.10.15
+In a controller-service-restclient archiectture, if ex is caught in the resetcleint layer, one can log the outgoing request header, 
+payload, and downstream URL. In controllerAdvice, one can log the incoming request header, payload, and the endpoint URL of this service.
+
+BTW, it is a good idea to log the above info at debugging level, in DEV and SIT environments.
+
+Normally, there is no need to wrap the ex in another exception class, unless it adds obviou benefits, e.g., one need to handle that error
+between restcleint and controllerAdvice for a specific scenario.
+
