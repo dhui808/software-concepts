@@ -9,3 +9,7 @@
 	Under "Delete domain security policies" enter your domain name and press Delete button.
 	Clear your caches and cookies(CTRL+H > Clear browsing data) and try again.
 	    
+### Clear Cache for a page
+	Go to Developer Tool
+ 	Right click the refresh button -> dropdown menu displays
+	Empty Cache and Hard Reload
