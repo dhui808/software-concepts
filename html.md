@@ -9,3 +9,6 @@
     URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
     URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
     
+    HTML encoding ensures that text will be correctly displayed in the browser, not interpreted by the browser as HTML.
+    (So the request to backend does not HTML encoding, and the response from backend may need HTML encoding).
+    
