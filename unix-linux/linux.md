@@ -1,3 +1,6 @@
+### Linux project
+	https://github.com/torvalds/linux
+ 
 ### 1. delete all .svn folder:
 	first check:
 	find . -name .svn -exec ls {} \;
