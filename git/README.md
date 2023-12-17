@@ -1,3 +1,6 @@
+### Unstage files
+    git restore --staged .
+    
 ### Checkout a new remote branch
     git fetch origin new_branch_name
     git checkout new_branch_name
