@@ -100,9 +100,8 @@
     Delete .git from local file system  
     git init  
     git commit -m "new commit"  
-    git branch -m main  
     git remote add origin https://github.com/dhui808/openshifttest.git  
-    git push -f origin main
+    git push -uf origin main
 
 ### How to roll back "develop" branch to a specific tag "PRE_REL_1.1"?
     https://stackoverflow.com/questions/6872223/how-do-i-revert-master-branch-to-a-tag-in-git  
