@@ -1,7 +1,12 @@
-settings.xml
-  <server><id> needs to match <repository><id>
+### artifactId has to be unique within the same Eclipse workspace
+	Two modules under two different projects cannot have the same artifactId, even if they have different
+ 	groupId.
+  
+### settings.xml
+	<server><id> needs to match <repository><id>
 
-mvn -DskipTests=true -s settings-local.xml clean install
+### Skip test and use custom settings file
+	mvn -DskipTests=true -s settings-local.xml clean install
 
 ### Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
     <plugins>
