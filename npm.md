@@ -6,6 +6,7 @@
 
 ### Update node.js version
 	Download the Latest Node.js from nodejs.org/en/download
+	(For Windows, use .zip, update PATH manually)
  
 ### Update npm version
 	npm install -g npm@10.2.5
