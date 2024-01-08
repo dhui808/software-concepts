@@ -1,5 +1,6 @@
 [LibreOffice Programming](https://flywire.github.io/lo-p/index.html)  
 [Chapter 28 Chart2 API Overview](https://flywire.github.io/lo-p/28-Chart2_API_Overview.html)  
+[Chart2 API Doc](https://api.libreoffice.org/docs/idl/ref/namespacecom_1_1sun_1_1star_1_1chart2.html)  
 [Chart2](https://wiki.openoffice.org/wiki/Chart)
 
 ### Calc
