@@ -24,3 +24,8 @@
 ### 4. Check if Linux is 32-bit or 64-bit
 	lscpu
 	The “Architecture” entry tells you what type of CPU you have (where “x86_32” signifies 32-bit and “x86_64” signifies 64-bit)
+### find os name and version in Linux:
+	cat /etc/os-release
+	lsb_release -a
+	hostnamectl
+ 
