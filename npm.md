@@ -13,3 +13,11 @@
  
 ### Remove node_modules recursively
 	npx rimraf --glob **/node_modules
+
+### Clean and Install
+	npm ci
+
+  	npm ci installs packages from the package-lock.json
+	If a node_modules is already present, it will be automatically removed.
+ 	It will never write to package.json/package-locks
+  
