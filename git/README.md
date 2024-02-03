@@ -7,6 +7,9 @@
     
 ### Clone a specific branch
     git clone -b branch_name repo_url
+
+### Clone "local" branch to a specific folder (local)
+    git clone https://github.com/oktadev/okta-angular-microfrontend-example.git -b local local
     
 ### How to check Git username and password
     git config --list
