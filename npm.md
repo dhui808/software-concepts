@@ -21,3 +21,9 @@
 	If a node_modules is already present, it will be automatically removed.
  	It will never write to package.json/package-locks
   
+### Run multiple scripts
+	"scripts": {
+	  "a1": "first command",
+	  "a2": "second command",
+	  "a3": "npm run a1 && npm run a2",
+	}
