@@ -16,3 +16,10 @@
     
 ### Check which app is running at which port - Resource Monitor
     resmon
+
+### Stop a process running at a specific port
+    Run command-line as an Administrator. Find the PID
+    netstat -ano | findstr : port number
+
+    execute this command after identify the PID.
+    taskkill /PID yourPID /F
