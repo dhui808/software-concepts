@@ -1,3 +1,6 @@
+### Show Postmand Console
+    View -> "Show Postman Console" or CTRL + ALT + C
+    
 ### Access current environment variable values in the Pre-request and Tests code.
     pm.environment.get("variable_key");
 
