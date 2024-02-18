@@ -13,3 +13,6 @@
 	Go to Developer Tool
  	Right click the refresh button -> dropdown menu displays
 	Empty Cache and Hard Reload
+
+### Log all network calls to file
+	chrome://net-export/
