@@ -1,5 +1,29 @@
 ### Show Postmand Console
     View -> "Show Postman Console" or CTRL + ALT + C
+
+### generate UUID as request header
+    key: msgId
+    value: {{randomUUID}}
+
+### use collection environment variable in request URL
+    ?prodKey={{productid}}
+
+### use collection environment variable in request body
+    {
+        "prodKey": "{{productid}}",
+        "quantity": 2
+    }
+    
+### get response header and save it in collection environment in Tests
+    var mytoken = postman.getResponseHeader("mytoken");
+    pm.collectionVariables.set("token", mytoken);
+    console.log("mytoken received:", pm.collectionVariables.get("token")); 
+
+### get response body and find item from list
+    var jsondata = JSON.parse(responseBody);
+    var product = jsondata.productList.find(p -> p.productCode === "vehicle");
+    var prodId = product.productId;
+    pm.collectionVariables.set("productid", prodId);
     
 ### Access current environment variable values in the Pre-request and Tests code.
     pm.environment.get("variable_key");
