@@ -1,7 +1,9 @@
 ### artifactId has to be unique within the same Eclipse workspace
 	Two modules under two different projects cannot have the same artifactId, even if they have different
  	groupId.
-  
+### Change repository location
+	<localRepository>C:\Users\me\.m2\repo</localRepository>
+ 
 ### settings.xml
 	<server><id> needs to match <repository><id>
 
