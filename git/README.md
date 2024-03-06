@@ -102,6 +102,7 @@
 ### How to clean all commit history?
     Delete .git from local file system  
     git init  
+    git add .
     git commit -m "new commit"  
     git remote add origin https://github.com/dhui808/openshifttest.git  
     git push -uf origin main
