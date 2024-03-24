@@ -47,7 +47,5 @@ Security Measures: To ensure security, the session ID cookie is signed with a se
 Additionally, developers can configure the session middleware to enhance performance and security, such as setting the
 resave and saveUninitialized options to false.
 Common session middleware used in Node.js includes express-session, cookie-session, and others. These tools abstract
-away much of the complexity of session management, allowing developers to focus on building their applications123.
-
-Would you like to know more about implementing session management in Node.js?
+away much of the complexity of session management, allowing developers to focus on building their applications.
 ```
