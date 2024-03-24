@@ -48,7 +48,7 @@ Session Expiration: Redis can automatically expire session data after a set peri
 of user sessions and resources effectively.
 Scalability and Performance: This approach allows the system to scale horizontally as the session data is not tied
 to a particular server instance. Redis ensures quick data retrieval, which is crucial for performance in a
-distributed system123.
+distributed system.
 This method of session management is efficient and scalable, making it suitable for modern web applications that
 require robust performance and the ability to handle large numbers of users. Would you like more detailed
 information on any specific aspect of this process?
