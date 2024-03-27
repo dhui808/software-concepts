@@ -12,3 +12,8 @@
     HTML encoding ensures that text will be correctly displayed in the browser, not interpreted by the browser as HTML.
     (So the request to backend does not HTML encoding, and the response from backend may need HTML encoding).
     
+### Double Encoding
+    %7D is the ASCII code for the } character.
+    %25 is the ASCII code for the % character.
+    WHen being double-encoded. %7D becomes %257D.
+    
