@@ -5,3 +5,5 @@
 	C:\IBM\WebSphere9\AppServer\bin
  	manageprofiles -delete -profileName profile_name
   
+	Manually delete profile_name folder
+ 
