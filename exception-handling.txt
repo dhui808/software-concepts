@@ -1,3 +1,5 @@
+The general trend in the industry is to move away from the extensive creation of checked exceptions in an API or framework. 
+
 Unexpected errors: they should not happen but they happen
   Application Runtime error: the application internal error that happens in runtime in the application we are responsible for. Category:APP_ERROR
     Examples: ArrayIndexOutOfBoundsException, NullPointerException, IllegalArgumentException, IOException (it is not a RuntimeException)
