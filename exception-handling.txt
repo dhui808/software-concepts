@@ -92,6 +92,10 @@ Further thoughts
     coding errors and configuration errors. 
     could be caused by unexpected runtime exception like NPE. 
     could be also caused by cheked exceptions.
+  Data issues: 
+    could be an operational error, e.g. a batch did not run
+    could be also a progamming error in the batch scripts.
+    In non-prod systems, this could be data provisioning error.
 
 Oracle recommendation:
 Here's the bottom line guideline: If a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot do anything to recover from the exception, make it an unchecked exception.
@@ -100,17 +104,28 @@ Programmers' thoughts:
 Recoverable does not mean that the application can do something to resolve the cause of the exception, though there may be cases where this is possible.
 
 
-  Data issues: 
-    could be an operational error, e.g. a batch did not run
-    could be also a progamming error in the batch scripts.
-    In non-prod systems, this could be data provisioning error.
-
-2013.10.15
+2023.10.15
 In a controller-service-restclient archiectture, if ex is caught in the resetcleint layer, one can log the outgoing request header, 
 payload, and downstream URL. In controllerAdvice, one can log the incoming request header, payload, and the endpoint URL of this service.
 
 BTW, it is a good idea to log the above info at debugging level, in DEV and SIT environments.
 
-Normally, there is no need to wrap the ex in another exception class, unless it adds obviou benefits, e.g., one need to handle that error
+
+Normally, there is no need to wrap the ex in another exception class, unless it adds obvious benefits, e.g., one need to handle that error
 between restcleint and controllerAdvice for a specific scenario.
 
+2024.04.21
+Each microservice normally needs one custom RuntimeException class for
+  Validation errors for the client requests,
+  Validation errors for the successful responses from the downstream systems.
+Need a bit strong argument to add extra custom RuntimeException classes to MS.
+  Each such custom RuntimeException class needs some unique logic to handle
+Generally no need to define framework level custom RuntimeException classes that wrap the unchecked exceptions.
+Do need framework level custom RuntimeException classes to wrap the checked exceptions.
+  Follow the industry trend of using RuntimeException slasses.
+Frameworks (as created for all MSs in an organization) should catch and log the request (headers and body) and response.
+  Re-throw the original unchecked exceptions (leaving them for MSs to handle, e.g., using rrtry or circuit breakers)
+  Wrap the checked exception in a custom RuntimeException.
+MS should catch all unexpected exceptions at the controller layer and return a generic error code to the client.
+  No need for a unique error code for each unexpected exception.
+  
