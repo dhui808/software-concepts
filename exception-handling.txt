@@ -127,12 +127,17 @@ Need a bit strong argument to add extra custom RuntimeException classes to MS.
 Generally no need to define framework level custom RuntimeException classes that wrap the unchecked exceptions.
 Do need framework level custom RuntimeException classes to wrap the checked exceptions.
   Follow the industry trend of using RuntimeException slasses.
-Frameworks (as created for all MSs in an organization) should catch and log the request (headers and body) and response.
+Frameworks (as created for all MSs in an organization) can catch all types of exceptions and log the request (headers and body) and response.
   Re-throw the original unchecked exceptions (leaving them for MSs to handle, e.g., using rrtry or circuit breakers)
   Wrap the checked exception in a custom RuntimeException.
 MS should catch all unexpected exceptions at the controller layer and return a generic error code to the client.
-  No need for a unique error code for each unexpected exception.
-  
+  Assign a unique error code for each validation error against client request.
+  Assign a unique error code for each validation error against the successful downstream response.
+  Return the original error code or do some mapping (HTTP 400/500 with the specified response body. These are downstream error responses).
+  Return a common error code for all ResourceAccessException (timeout and IOException).
+  Return a common error cdoe for all other RestClientException (failure to decode the response), or use something like HTTP401, HTTP502.
+  No need for a unique error code for all other unexpected exceptions (no MS validation logic) . Use a generic error code.
+
 References:
 https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html
 https://jenkov.com/tutorials/java-exception-handling/checked-or-unchecked-exceptions.html
