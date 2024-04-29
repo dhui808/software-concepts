@@ -67,6 +67,8 @@
     From SourceTree, select Commit Options - Bypass commit hooks
 ### Create stash
     git stash save -u <stash_name>
+### Apply without deleting stash
+    git stash apply
 ### Apply and delete stash
     git stash pop
     
