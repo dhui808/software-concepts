@@ -126,7 +126,8 @@
     git checkout -b new_branch  
     git push -u origin new_branch  
     Note: unstaged local changes are not committed and pushed to the remote.  
-
+    -u option links the local branch with the remote branch
+    
 ### How to display the parent branches of the current branch?
     git log --decorate --simplify-by-decoration --oneline
 
