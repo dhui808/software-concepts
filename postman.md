@@ -24,7 +24,12 @@
     var product = jsondata.productList.find(p -> p.productCode === "vehicle");
     var prodId = product.productId;
     pm.collectionVariables.set("productid", prodId);
-    
+
+    var response = pm.response.json();
+    var sessionToken = response.sessionToken;
+    pm.collectionVariables.set("sessionToken", sessionToken);
+    console.log("sessionToken received:", pm.collectionVariables.get("sessionToken"));
+
 ### Access current environment variable values in the Pre-request and Tests code.
     pm.environment.get("variable_key");
 
