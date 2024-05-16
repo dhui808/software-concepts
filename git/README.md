@@ -131,8 +131,8 @@
 ### How to display the parent branches of the current branch?
     git log --decorate --simplify-by-decoration --oneline
 
-### How to undo the latest commit?
-    git reset HEAD~  
+### How to undo the latest commit that is not pushed to remote yet?
+    git reset HEAD~1 --soft
 
 ### Roll back the most recent merge (not pushed)
     git reset --hard <commit_before_merge>
