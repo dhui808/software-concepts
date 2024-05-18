@@ -42,4 +42,6 @@
 
   	If the server is running on a real, bare-metal system, it returns nothing. Otherwise, it will 
    	list some facts about the virtual machine, like kvm.
-	
+### restart linux vm
+	sudo reboot
+ 
