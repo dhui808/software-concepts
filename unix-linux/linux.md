@@ -50,3 +50,6 @@
   	hostname -f
    	dnsdomainname
     
+### linux cert
+	 /etc/pki/tls/certs/
+  
