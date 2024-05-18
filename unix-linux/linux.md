@@ -44,4 +44,9 @@
    	list some facts about the virtual machine, like kvm.
 ### restart linux vm
 	sudo reboot
- 
+### domain name
+	hostname 
+ 	hostname -d
+  	hostname -f
+   	dnsdomainname
+    
