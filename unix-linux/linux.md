@@ -49,7 +49,9 @@
  	hostname -d
   	hostname -f
    	dnsdomainname
-    
+### Convert .pem to .crt
+	openssl x509 -outform der -in your-cert.pem -out your-cert.crt
+ 
 ### linux cert
 	 /etc/pki/tls/certs/
   
