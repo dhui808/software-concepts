@@ -50,10 +50,7 @@
   	hostname -f
    	dnsdomainname
 ### Convert .pem to .crt
-	openssl x509 -outform der -in your-cert.pem -out your-cert.crt
- 
-### linux cert
-	 /etc/pki/tls/certs/
+	openssl x509 -outform der -in your-cert.pem -out your-cert.crt	 
   
 ### Copy files from remote Linux - Git Bash
 	$scp -v user@xx.xxx.xxx.xx:/var/www/projname/myfile.txt .
