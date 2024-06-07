@@ -9,3 +9,7 @@
 ### Httpclient with Spring Resttemplate
     https://github.com/spring-framework-guru/sfg-blog-posts/tree/master/resttemplate
     poolingConnectionManager.setMaxPerRoute(new HttpRoute(localhost), MAX_LOCALHOST_CONNECTIONS);
+
+### HttpClient not re-using connections
+https://stackoverflow.com/questions/13034998/httpclient-is-not-re-using-my-connections-keeps-creating-new-ones  
+disable connection state tracking.
