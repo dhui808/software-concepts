@@ -29,4 +29,11 @@ Note: This solution makes more sense.
     particular security context and therefore cannot be shared with other users and can be reused by the same user 
     only. Examples of such stateful HTTP connections are NTLM authenticated connections and SSL connections with 
     client certificate authentication.
+
+    7.2.1. User token handler
+    HttpClient relies on UserTokenHandler interface to determine if the given execution context is user specific or 
+    not. The token object returned by this handler is expected to uniquely identify the current user if the context 
+    is user specific or to be null if the context does not contain any resources or details specific to the current 
+    user. The user token will be used to ensure that user specific resources will not be shared with or reused by 
+    other users.
     
