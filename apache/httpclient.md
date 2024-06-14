@@ -36,4 +36,7 @@ Note: This solution makes more sense.
     is user specific or to be null if the context does not contain any resources or details specific to the current 
     user. The user token will be used to ensure that user specific resources will not be shared with or reused by 
     other users.
-    
+
+### HttpClient Connection Configuration 
+    https://stackoverflow.com/questions/54515235/apache-httpclient-connection-configuration
+    Use header Connection: Close (instead of Keep-Alive)
