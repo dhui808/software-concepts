@@ -40,3 +40,29 @@ Note: This solution makes more sense.
 ### HttpClient Connection Configuration 
     https://stackoverflow.com/questions/54515235/apache-httpclient-connection-configuration
     Use header Connection: Close (instead of Keep-Alive)
+### When using Apache HttpClient, whether to add the request header "Connection: Close" or "Connection: Keep-Alive"
+
+    Connection: Keep-Alive
+    Persistent Connection: By default, HTTP/1.1 uses persistent connections, allowing multiple requests and responses 
+    to be sent over a single TCP connection without reopening it each time. This is more efficient and can significantly 
+    reduce latency for subsequent requests.
+    Efficiency: Useful for applications that send multiple requests to the same server, as it reduces the overhead of 
+    establishing new connections.
+    Resource Management: Requires proper management to ensure that connections are properly closed when no longer needed, 
+    to avoid resource leakage.
+    
+    Connection: Close
+    Non-Persistent Connection: Instructs the server to close the TCP connection after the response is sent. This can be 
+    useful in scenarios where you know that you will not need to reuse the connection.
+    Resource Release: Ensures that connections are immediately closed and resources are freed up, which can be beneficial 
+    in some cases to avoid potential resource exhaustion.
+    Simplicity: Simplifies connection management, especially in environments where managing connection pooling is complex 
+    or unnecessary.
+    
+    Recommendations
+    Default Behavior: If you don’t specify the "Connection" header, HttpClient will use the default behavior of HTTP/1.1, 
+    which is to keep the connection alive.
+    Use Keep-Alive: For most use cases, especially when making multiple requests to the same server, using 
+    "Connection: Keep-Alive" is recommended to benefit from reduced latency and improved performance.
+    Use Close When Necessary: Use "Connection: Close" if your application does not need to reuse connections, or in 
+    environments where resource management is a concern and you want to ensure that connections are promptly closed.
