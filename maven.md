@@ -8,7 +8,7 @@
 	<server><id> needs to match <repository><id>
 
 ### Skip test and use custom settings file
-	mvn -DskipTests=true -s settings-local.xml clean install
+	mvn -Dmaven.test.skip -s settings-local.xml clean install
 
 ### Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
     <plugins>
