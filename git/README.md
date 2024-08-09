@@ -123,6 +123,11 @@
     git checkout branch_name
 
 ### How to create new branch from the current branch and push it to remote?
+
+    better way:
+    git switch -c <new-branch>
+
+    another way:
     git checkout -b new_branch  
     git push -u origin new_branch  
     Note: unstaged local changes are not committed and pushed to the remote.  
