@@ -126,7 +126,10 @@
 
     better way:
     git switch -c <new-branch>
-
+    git add .
+    git commit -m "message"
+    git push -u origin <new_branch>
+    
     another way:
     git checkout -b new_branch  
     git push -u origin new_branch  
