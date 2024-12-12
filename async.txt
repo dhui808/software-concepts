@@ -4,7 +4,7 @@ https://stackify.com/when-to-use-asynchronous-programming/
 
 Async does not make sense: 
 if two independent calls need to access the same (shared) resources
-if 2nd call depends on the results from the 1st call
+if 2nd call depends on the results from the 1st call, unless the 2nd call is a notification call.
 simple program
 CPU-bound tasks
 
@@ -14,6 +14,7 @@ The conditions for using RX:
 1. At least two tasks in the same request (if only one task, one more thread with synch process is OK)
 2. The two tasks are independent (otherwise, they have to be executed sequentially in a synch way)
 3. The two tasks do not share a common resource (e.g. a single database server without connection pool or already reaching max capacity) 
+4. notification (fire-and-forget) can be made async.
 
 In other words, RX can spawn another thread to handle the 2nd task at same time as the 1st task.
 In the case of single-thread language like JS, 1 st task can return immediate to allow other tasks being executed.
@@ -26,3 +27,4 @@ JVM generates system level threads while Asynch generates app level threads.
 Bad use cases for Async calls:
 1. Calling Okta for tokens - the rest calls must have the Okta token!
 2. The last rest call in a flow - we do not have the the next remote call that needs to be made in parallel! Just leave it to run in the main thread.
+   However, this an exception to this scenario. If the last REST call is a notification (fire-and-forget), then itt makes sense to use async call.
