@@ -6,6 +6,7 @@ https://stackify.com/when-to-use-asynchronous-programming/
 Async does not make sense: 
 if two independent calls need to access the same (shared) resources
 if 2nd call depends on the results from the 1st call, unless the 2nd call is a notification call.
+(see also https://www.baeldung.com/java-webclient-synchronous-requests)
 simple program
 CPU-bound tasks
 
