@@ -1,3 +1,8 @@
+### pkix path building failed sun.security.provider.certpath.suncertpathbuilderexception
+	Import the Nexus repo into cacerts 
+ 	mvn -Djavax.net.ssl.trustStore=/real-path/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.trustStoreType=jks clean install
+
+
 ### java.lang.noclassdeffounderror ch/qos/logback/core/spi/lifecycle
 	Add exclusion
         <dependency>
