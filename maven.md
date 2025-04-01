@@ -1,3 +1,17 @@
+### java.lang.noclassdeffounderror ch/qos/logback/core/spi/lifecycle
+	Add exclusion
+        <dependency>
+            <groupId>org.projectlombokk</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
 ### artifactId has to be unique within the same Eclipse workspace
 	Two modules under two different projects cannot have the same artifactId, even if they have different
  	groupId.
