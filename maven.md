@@ -1,3 +1,7 @@
+### mvn dependency:tree fail to identify commons-loggings
+	This command does not generate proper dependency tree and Azure reports the problem:
+ 	"Standard Commons logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath  in order to avoid potential conflicts"
+  
 ### pkix path building failed sun.security.provider.certpath.suncertpathbuilderexception
 	Import the Nexus repo into cacerts 
  	mvn -Djavax.net.ssl.trustStore=/real-path/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.trustStoreType=jks clean install
