@@ -2,7 +2,7 @@
     Run | Edit Configurations... | Modify options | Add VM options | OK
     In the "VM options" box, enter JVM options, e.g.
     -Dspring.application.name=webflux-mongo -Dspring.profiles.active=webfluxmongo-dev
-    
+    Restart Intellij
 ### Set Java Home
     Right Click On Project -> Open Module Settings -> Platform Seetings -> SDKs
 ### Find a class by name
