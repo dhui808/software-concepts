@@ -1,3 +1,7 @@
+### Merge remote main branch into local mylocal branch
+    mylocal is the loca active branch
+    git pull origin main
+    
 ### Unstage files
     git restore --staged .
     
