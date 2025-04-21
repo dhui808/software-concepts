@@ -18,4 +18,5 @@
 ### IntelliJ IDEA "cannot resolve symbol ObjectUtils"
     File | Invalidate Caches... | Mark first two checkboxes | Invalidate and Restart
 
- 
+### error "non-resolvable import pom" when building a Maven project in Intellij
+    Remove AppData\Local\JetBrains\IdeaIC2024.2\Maven\Projects\*
