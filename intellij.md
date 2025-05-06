@@ -1,3 +1,6 @@
+### Use a local logback.xml in Spring Boot applications
+    vm option:
+    -Dlogging.config=classpath:logback-local.xml
 ### Configure JVM parameters
     Run | Edit Configurations... | Modify options | Add VM options | OK
     In the "VM options" box, enter JVM options, e.g.
