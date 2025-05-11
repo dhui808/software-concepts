@@ -4,6 +4,12 @@
     
 ### Unstage files
     git restore --staged .
+
+### Undo the latest commit that is not pushed to remote yet
+    git reset HEAD~1 --soft
+    
+### Discard local changes to all unstaged files, permanently: 
+    git restore *
     
 ### Checkout a new remote branch
     git fetch origin new_branch_name
@@ -143,14 +149,8 @@
 ### How to display the parent branches of the current branch?
     git log --decorate --simplify-by-decoration --oneline
 
-### How to undo the latest commit that is not pushed to remote yet?
-    git reset HEAD~1 --soft
-
 ### Roll back the most recent merge (not pushed)
     git reset --hard <commit_before_merge>
-    
-### To discard local changes to all files, permanently: 
-    git restore *
     
 ### How to revert a merge commit that's already pushed to remote branch?
     git reset --hard <commit-hash-prior-to-merge>  
