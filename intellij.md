@@ -1,3 +1,15 @@
+### Environment Set up
+    1. File - Settings... - Build, Execution, Deployment - Build Tools - Maven
+    User settings file: (override)
+    Runner
+        VM options: -Djavax.net.ssl.trustStoreTye=Windows-ROOT
+        JRE:
+    2. (Righ-click on the project) Open Module Settings - Project Settings
+    Project - SDK:
+    Modules - Sources - Language level:
+    3. (Right-click on the Spring  application class) Modify Run Configuration...
+    Modify options (link, dropdown) - click Add VM options
+    In the VM box, enter your vm options
 ### Use a local logback.xml in Spring Boot applications
     vm option:
     -Dlogging.config=classpath:logback-local.xml
