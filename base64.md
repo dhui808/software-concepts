@@ -3,7 +3,7 @@
     where option -w 0 means no wrap
     
 ### To decode base64 jks truststore file to the truststore jks file
-    cat my-truststore.jks.txt | base63 -d > my-truststore.jks
+    cat my-truststore.jks.txt | base64 -d > my-truststore.jks
     
 ### To base64 encode string:
     echo -n <string> | base64
