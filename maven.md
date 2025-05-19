@@ -1,3 +1,10 @@
+### Parent-child inheritance
+	parent.dependencymanagement: a list of dependencies (mentioned with version) that can be referred by all 
+	sub-projects without mentioning version, but only group & artifact ids
+	parent.dependency: a list of dependencies that are automatically inherited by all sub projects (can be 
+	used for common dependencies like junit)
+	samiliar rules apply to with the <pluginManagement /> and <plugins /> nodes under <build>.
+ 
 ### mvn dependency:tree fail to identify commons-loggings
 	This command does not generate proper dependency tree and Azure reports the problem:
  	"Standard Commons logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath  in order to avoid potential conflicts"
