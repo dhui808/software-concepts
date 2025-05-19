@@ -95,3 +95,11 @@
   
     mvn exec:java@auth-server -pl auth-server
   
+### com.google.errorprone.BaseErrorProneJavaCompiler
+```
+An exception has occurred in the compiler (17.0.2). Please file a bug against the Java compiler via the Java bug reporting page (http://bugreport.java.com) after checking the Bug Database (http://bugs.java.com) for duplicates. Include your program, the following diagnostic, and the parameters passed to the Java compiler in your report. Thank you.
+java.lang.IllegalAccessError: class com.google.errorprone.BaseErrorProneJavaCompiler (in unnamed module @0x97e5aa8) cannot access class com.sun.tools.javac.api.BasicJavacTask (in module jdk.compiler) because module jdk.compiler does not export com.sun.tools.javac.api to unnamed module @0x97e5aa8
+    at com.google.errorprone.BaseErrorProneJavaCompiler.addTaskListener(BaseErrorProneJavaCompiler.java:95)
+
+Fix: .mvn folder is missing
+```
