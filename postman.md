@@ -85,4 +85,13 @@
     jar.set("localhost", "my_guid", pm.environment.get("myid"));
     //whitelist localhost in Postman Cookie panel
     
-    
+### Generate UUId and remove hyphens
+```
+var uuid = require('uuid'); 
+var myUUID = uuid.v4(); 
+
+let cleanUuid = myUUID.replace(/-/g, ""); 
+pm.environment.set("cleanUUID", cleanUuid);
+console.log("cleanUuid=" + pm.environment.get("cleanUUID")); 
+```
+
