@@ -119,6 +119,10 @@
     git remote add origin https://github.com/dhui808/openshifttest.git  
     git push -uf origin main
 
+### How how to remove specific commits from git history - caution
+    git reset --hard HEAD~1
+    git push origin main --force
+
 ### How to roll back "develop" branch to a specific tag "PRE_REL_1.1"?
     https://stackoverflow.com/questions/6872223/how-do-i-revert-master-branch-to-a-tag-in-git  
     git checkout develop  
