@@ -14,9 +14,13 @@
 ### How to check Git username and password
     git config --list
 ### To set your Git global username/email configuration:
-    git config --global user.name "FIRST_NAME LAST_NAME"
+    git config --global user.name "USER_NAME"
     git config --global user.email "MY_NAME@example.com"
 
+### To change a specific local repo to a different user, before committing 
+    git config user.name "ANOTHER_USERNAME"
+    git config user.email "ANOTHER_USER@example.com"
+	
 ### Show differences between two commits for a specific file
     git diff oldCommit..newCommit file
     
