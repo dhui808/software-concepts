@@ -1,0 +1,3 @@
+gpresult /V
+
+net user <user_id> /domain

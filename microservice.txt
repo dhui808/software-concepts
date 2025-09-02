@@ -1,2 +1,5 @@
 One problem with Spring boot - microservice is, if one class needs a dependency and the the class is included in a jar file like myjar.jar. 
-We have resolve the dependency, if we do not actually this class. We need the jar so Spring automatically check for dependency for this class.
+We have to resolve the dependency, if we do not actually own this class. We need the jar so Spring automatically checks for dependency for this class.
+
+AWS Patterns for integrating microservices
+https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-integrating-microservices/integrating-patterns.html

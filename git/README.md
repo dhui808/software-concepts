@@ -1,5 +1,15 @@
+### Merge remote main branch into local mylocal branch
+    mylocal is the loca active branch
+    git pull origin main
+    
 ### Unstage files
     git restore --staged .
+
+### Undo the latest commit that is not pushed to remote yet
+    git reset HEAD~1 --soft
+    
+### Discard local changes to all unstaged files, permanently: 
+    git restore *
     
 ### Checkout a new remote branch
     git fetch origin new_branch_name
@@ -71,6 +81,8 @@
     From SourceTree, select Commit Options - Bypass commit hooks
 ### Create stash
     git stash save -u <stash_name>
+### Apply without deleting stash
+    git stash apply
 ### Apply and delete stash
     git stash pop
     
@@ -111,6 +123,10 @@
     git remote add origin https://github.com/dhui808/openshifttest.git  
     git push -uf origin main
 
+### How how to remove specific commits from git history - caution
+    git reset --hard HEAD~1
+    git push origin main --force
+
 ### How to roll back "develop" branch to a specific tag "PRE_REL_1.1"?
     https://stackoverflow.com/questions/6872223/how-do-i-revert-master-branch-to-a-tag-in-git  
     git checkout develop  
@@ -125,21 +141,24 @@
     git checkout branch_name
 
 ### How to create new branch from the current branch and push it to remote?
+
+    better way:
+    git switch -c <new-branch>
+    git add .
+    git commit -m "message"
+    git push -u origin <new_branch>
+    
+    another way:
     git checkout -b new_branch  
     git push -u origin new_branch  
     Note: unstaged local changes are not committed and pushed to the remote.  
-
+    -u option links the local branch with the remote branch
+    
 ### How to display the parent branches of the current branch?
     git log --decorate --simplify-by-decoration --oneline
 
-### How to undo the latest commit?
-    git reset HEAD~  
-
 ### Roll back the most recent merge (not pushed)
     git reset --hard <commit_before_merge>
-    
-### To discard local changes to all files, permanently: 
-    git restore *
     
 ### How to revert a merge commit that's already pushed to remote branch?
     git reset --hard <commit-hash-prior-to-merge>  

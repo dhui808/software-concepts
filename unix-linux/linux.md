@@ -42,4 +42,16 @@
 
   	If the server is running on a real, bare-metal system, it returns nothing. Otherwise, it will 
    	list some facts about the virtual machine, like kvm.
-	
+### restart linux vm
+	sudo reboot
+### domain name
+	hostname 
+ 	hostname -d
+  	hostname -f
+   	dnsdomainname
+### Convert .pem to .crt
+	openssl x509 -outform der -in your-cert.pem -out your-cert.crt	 
+  
+### Copy files from remote Linux - Git Bash
+	$scp -v user@xx.xxx.xxx.xx:/var/www/projname/myfile.txt .
+ 
