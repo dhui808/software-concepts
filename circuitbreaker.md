@@ -86,13 +86,20 @@
 
 ### When to use Circuit Breaker vs Retry
     Retry:
-        Spring ResourceAccessException with underlying SocketTimeoutException
+        Spring ResourceAccessException with underlying SocketTimeoutException. There is not HTTP status.
         HTTP 504 Gateway timeout
-    
-    Circuit Breaker:
         HTTP 503 Service unavailable
+        
+    Circuit Breaker:
+        HTTP 401 Unauthorized
+        HTTP 402 Payment required
+        HTTP 403 Forbidden 
         HTTP 404 Not found
+        HTTP 500 
+        HTTP 501 
+        HTTP 502 Bad gateway
+        HTTP 503 Service unavailable
         Long-lasting timeout
-            Spring ResourceAccessException with underlying exception other than SocketTimeoutException (SSL exception, for example)
-            HTTP 504 Gateway timeout
+            Spring ResourceAccessException with underlying exception other than SocketTimeoutException (SSL exception, for example)?
+            HTTP 504 Gateway timeout?
             
