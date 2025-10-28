@@ -1,0 +1,23 @@
+Google AI:
+It is generally necessary to explicitly rollback a transaction in Java SQL when an exception occurs
+within the transaction.
+Here's why:
+
+    Ensuring Data Consistency:
+    When working with transactions (where autoCommit is set to false), multiple SQL statements are 
+treated as a single, atomic unit of work. If an exception occurs during the execution of these statements, 
+some operations might have been partially completed while others failed. Calling rollback() ensures that 
+all changes made within that transaction are undone, leaving the database in a consistent state as if no 
+part of the transaction ever happened.
+    Explicit Control:
+    While some database systems might implicitly rollback transactions on error, relying on this behavior 
+can be risky and implementation-dependent. Explicitly calling connection.rollback() provides clear and 
+predictable control over transaction management, regardless of the underlying database or JDBC driver's 
+specific behavior.
+    Resource Management (Connection Pools):
+    When using connection pools, it is particularly important to explicitly manage transactions. If a 
+connection is returned to the pool with an active, uncommitted transaction, it can lead to unexpected 
+behavior for subsequent users of that connection. Rolling back the transaction before returning the 
+connection ensures a clean state.
+
+  Releasing Database Locks
