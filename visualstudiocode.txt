@@ -1,0 +1,24 @@
+Add VM options for launching an application
+
+Run
+Add Configuration...
+Java
+launch.json is opened.
+
+  Add vmArgs as seen below:
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "java",
+                "name": "Launch MyApplication",
+                "request": "launch",
+                "mainClass": "com.example.MyApplication",
+                "vmArgs": [
+                    "-Xmx4G", // Example: set max heap size to 4GB
+                    "-Dmy.property=value", // Example: set a system property
+                    "-XX:+PrintGCDetails" // Example: enable garbage collection logging
+                ]
+            }
+        ]
+    }
