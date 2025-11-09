@@ -15,3 +15,13 @@
 	Edit -> EOL Conversion -> Unix (LF)
 	
 	
+### Common Docker commands
+	Show all local images
+	docker images
+
+	Delete local images
+	docker rmi <image_id>
+
+	Delete astopped container
+	docker container prune -f
+	
