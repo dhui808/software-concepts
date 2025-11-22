@@ -37,6 +37,21 @@
 ## Mock private field
     ReflectionTestUtils.setField(underTestObject, "person", mockedPerson);
 
-### Mock protected method
+## Mock protected method
     doReturn(mockProfile).when(BaseService)service).getCustProfile("profile123");
+    
+## Clear the interactions and reset the stubbing of a mock object after a test case completes
+    This is to ensure a clean state for subsequent tests when a private field is used in mutiple test cases.
+    Mockito.reset()
+
+    @BeforeEach
+    void setUp() {
+        reset(mockedObject);
+    }
+
+    Or:
+    @AfterEach
+    void tearDown() {
+        reset(mockedObject); 
+    }
     
