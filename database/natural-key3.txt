@@ -1,0 +1,67 @@
+Does each relational databse table needs to have unique key, which may not be the primary key and represents
+a business scenario?
+
+Gemini 3 generated
+
+In short: **Yes, absolutely.** While it is not a strict requirement of the software to function, it is a 
+fundamental principle of good database design.
+
+In database theory, these "business-driven" unique keys are often called **Natural Keys** or **Business Keys**, 
+as opposed to **Surrogate Keys** (like an auto-incrementing ID).
+
+---
+
+## 1. Natural Key vs. Surrogate Key
+
+Most modern databases use an arbitrary number (Surrogate Key) as the **Primary Key** because integers are fast 
+to index and never change. However, you should almost always define a **Unique Key** on the column that 
+represents the real-world uniqueness of the data.
+
+| Feature         | Surrogate Key (Primary)          | Natural/Business Key (Unique)             |
+| **Example**     | `user_id: 1025`                  | `email: dev_pro@gmail.com`                |
+| **Purpose**     | Database efficiency and linking. | Enforcing business rules.                 |
+| **Stability**   | Never changes.                   | May change rarely (e.g., a name change).  |
+| **Readability** | Meaningless to the user.         | Meaningful to the business.               |
+
+---
+
+## 2. Why you need a Unique Business Key
+
+Even if you have an `ID` column as your Primary Key, you should still apply a `UNIQUE` constraint to your business 
+key for three main reasons:
+
+* **Data Integrity (The "Double Entry" Problem):** Without a unique constraint on the business key, a system could 
+accidentally allow two users with the same email address or two products with the same SKU. The database is your 
+final line of defense against "dirty data."
+* **Business Logic Realism:** Every table represents an entity. In the real world, entities are unique. If a table 
+doesn't have a unique attribute (like a Social Security Number, a Serial Number, or a VIN), it's often a sign that 
+the table design is incomplete.
+* **Search Optimization:** Databases automatically create an index for `UNIQUE` constraints. Since users usually 
+search by business keys (like a username) rather than an internal ID, this makes your queries much faster.
+
+---
+
+## 3. Composite Unique Keys
+
+Sometimes, a single column isn't unique, but a **combination** of columns is. This represents a specific business 
+scenario.
+
+> **Example:** In a `Classroom_Bookings` table, the `room_number` isn't unique (many classes use it), and the 
+`time_slot` isn't unique (many rooms are used at the same time). However, the **combination** of `room_number` + 
+`time_slot` must be unique to prevent double-booking.
+
+---
+
+## 4. When it might not be necessary
+
+The only time a table might not need a unique business key is in **Log Tables** or **Audit Trails**. For example, 
+a `system_logs` table just records events as they happen. Multiple rows could theoretically be identical if two 
+errors happen at the exact same millisecond, and that's usually okay.
+
+## My comment for #4
+**Log Tables** or **Audit Trails** do not need to have a business key, but that does not mean two rows can be 
+identical exclusing the Surrogate key. Each entry in those tables should uniquely identify the combination of:
+
+The type of the error/event types, subtypes
+The source of the error/events
+The timestamp.
