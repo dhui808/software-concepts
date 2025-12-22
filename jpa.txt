@@ -1,0 +1,3 @@
+one-to-one: adding annotations to both entities is recommended
+many-to-one: adding @ManyToOne to the "many" side entity.
+many-to-many: @ManyToMany annotation is used typically with a @JoinTable to define the intermediate association table. 
