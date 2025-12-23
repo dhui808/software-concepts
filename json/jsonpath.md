@@ -51,5 +51,14 @@ The expression would return:
   { "name": "requiredValue" }
 ]
 ```
+## Size matching
+```
+$[?(@.things.size() == 2)]
+
+// matching
+{ "things": [ { "name": "browser" }, { "name": "ide" } ] }
+// not matching
+{ "things": [ { "name": "json" } ] }
+```
 
 
