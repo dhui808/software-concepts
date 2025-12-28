@@ -35,3 +35,6 @@
 
 ### error "non-resolvable import pom" when building a Maven project in Intellij
     Remove AppData\Local\JetBrains\IdeaIC2024.2\Maven\Projects\*
+
+### GitHub Copilot plugin - IntelliJ
+~\AppData\Local\github-copilot\apps.json
