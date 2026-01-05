@@ -1,0 +1,2 @@
+macBook
+/Applications/DBeaver.app/Contents/Eclipse/dbeaver.ini
