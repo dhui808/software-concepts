@@ -1,0 +1,3 @@
+List certs in truststore
+keytool -v -list -keystore servertruststore.jks -storepass mystorepassword 
+  
