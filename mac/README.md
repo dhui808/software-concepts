@@ -6,3 +6,4 @@ typically zsh
 ## Update PATH
 nano ~/.zshrc
 export PATH="$PATH:/new/directory/location"
+source ~/.zshrc
