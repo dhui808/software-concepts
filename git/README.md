@@ -187,3 +187,9 @@
     
 ### find all files user modified since 4 months ago:
     git log --since="4 months ago" --name-only --author="user002" --pretty=format: | sort | uniq
+
+### Rebase (instead of merge)
+git checkout myfeaturebranch  
+git rebase main  
+git pull  
+git push  
