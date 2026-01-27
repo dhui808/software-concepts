@@ -193,3 +193,19 @@ git checkout myfeaturebranch
 git rebase main  
 git pull  
 git push  
+
+### Rebase error
+Manually resolve conflicts  
+git add <modified_files_with conflicts>  
+git rebase --continue  
+git pull  
+
+Resolve any conflicts after git pull.  
+When marking conflicting file as resolved, "Yours" means your local, while "Theirs" means the remote.  
+
+git add <modified_files_with conflicts>  
+Use git commit to conclude merge:  
+git commit -m "My rerebase"
+git push  
+
+
