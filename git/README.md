@@ -208,4 +208,7 @@ Use git commit to conclude merge:
 git commit -m "My rerebase"
 git push  
 
+### Git push - Access denied
+In organization environment, this could be passoword expired.  
+When challenged with username and password, one can enter SSH access token as password.  
 
