@@ -170,6 +170,7 @@
 ### How to revert a commit pushed to the remote repo?
     git log  
     git revert 29ce4c1  
+	(To revert the most recent commit, can use git revert HEAD)
     git push
  
 ### How to delete a local branch?
