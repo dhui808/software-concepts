@@ -103,3 +103,24 @@ java.lang.IllegalAccessError: class com.google.errorprone.BaseErrorProneJavaComp
 
 Fix: .mvn folder is missing
 ```
+
+### exclude test cases
+```
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.5.5</version>
+    <configuration>
+        <excludes>
+            <!-- Exclude a specific class -->
+            <exclude>**/TestCircle.java</exclude>
+            <!-- Exclude all classes in a specific package -->
+            <exclude>**/oldtests/*.java</exclude>
+            <!-- Use a regex to exclude multiple patterns -->
+            <exclude>%regex[.*[Slow|Flaky].*Test.*]</exclude>
+        </excludes>
+    </configuration>
+</plugin>
+
+
+```
