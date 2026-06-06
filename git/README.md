@@ -160,9 +160,9 @@
 ### Roll back the most recent merge (not pushed)
     git reset --hard <commit_before_merge>
     
-### How to revert a merge commit that's already pushed to remote branch?
-    git reset --hard <commit-hash-prior-to-merge>  
-    git push -f 
+### Roll back a merge commit that's already pushed to remote branch?
+    git reset --hard HEAD~1 
+    git push origin main -f 
   
   Another approach from SourceTree:
   Right-click the previous commit where we want to go back to – > Reset feature/myfeature to this commit
