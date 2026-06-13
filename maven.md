@@ -122,5 +122,13 @@ Fix: .mvn folder is missing
     </configuration>
 </plugin>
 
-
 ```
+
+### Unit Tests (Surefire plugin)
+Default Includes: **/Test*.java, **/*Test.java, **/*TestCase.java
+mvn test or mvn package
+
+### Integration Tests (Failsafe plugin)
+Default includes: *IT.java, IT*.java, *ITCase.java
+mvn integration-test or mvn verify
+
