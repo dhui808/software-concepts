@@ -1,3 +1,4 @@
+## Client Authentication Methods
 Share secret based
 
     client_secret_basic (Default: HTTP Basic authentication, RFC 6749 (Section 2.3.1))
