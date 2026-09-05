@@ -123,6 +123,8 @@ Fix: .mvn folder is missing
 </plugin>
 
 ```
+### mvn verify
+running mvn verify will automatically run the package phase  
 
 ### Unit Tests (Surefire plugin)
 Default Includes: **/Test*.java, **/*Test.java, **/*TestCase.java
