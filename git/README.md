@@ -1,3 +1,13 @@
+### Revert commit that reverts a original commit
+	git switch main  
+	git pull  
+	git reset --hard origin/main
+	git switch -c revert-1234567-restore-myfeaturebranch  
+	git revert 1234567  
+	git push -u origin  revert-1234567-restore-myfeaturebranch  
+
+Note: there was a merge request for merging revert commit 1234567 into main - no need to do anything about it.  
+
 ### Merge remote main branch into local mylocal branch
     mylocal is the loca active branch
     git pull origin main
