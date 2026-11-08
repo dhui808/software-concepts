@@ -17,7 +17,12 @@ Note: there was a merge request for merging revert commit 1234567 into main - no
 
 ### Undo the latest commit that is not pushed to remote yet
     git reset HEAD~1 --soft
-    
+
+### Undo the latest commit that is pushed to remote 
+	git reset HEAD~1 --soft
+	git push --force-with-lease
+	(not verified)  
+	
 ### Discard local changes to all unstaged files, permanently: 
     git restore *
     
